@@ -69,20 +69,6 @@
   ```
   Now if we list the contents of our current directory, we will see we have moved back into the parent folder. Lets take a moment to practice moving around our computers file system using `cd` and reading out contents using `ls` or `dir`.
 
-
-  Time to make a new folder in our desktop to clone our class files to. We use `mkdir` on both Mac and Windows to make a new directory.
-
-  ```
-  mkdir WebDevClassFiles
-  ```
-  will create a folder called WebDevClassFiles on your Desktop (Assuming you `cd` navigated to the Desktop first).
-
-  Now, lets navigate to this folder so we can clone our github repository.
-  ```
-  cd WebDevClassFiles
-  ```
-  Now we are in that directory!
-
   Now clone your forked copy of the class repo to the directory we just created on our Desktop (You are welcome to do all of this to your Documents folder instead).
 
   Go to the [Class Repository](https://github.com/Kadee80/WebDev_Spring17).  Click on the **Clone or Download** button in the upper right. Copy the SSH link that appears.
