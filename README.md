@@ -10,10 +10,7 @@
 
 **Fall 2018 – Professor Kathryn Adee**
 
-####Section A
-
 *Monday, Wednesday 4:30 - 6:20, 6:30PM – 8:20PM;  2 MetroTech Center Room 813*
-
 
 *To contact professor: kaa328@nyu.edu*
 
