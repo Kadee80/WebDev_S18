@@ -132,6 +132,9 @@ Every week, you will be commiting files and folders to your HW repo, and pushing
 
   * Back in terminal, navigate to your HW repo folder.
 
+
+  [CHEATSHEET](https://gist.github.com/Kadee80/62d823c07b12cc70868b97af8f9b546d)
+
   * Use `ls` or `dir` to make sure you are in the correct folder.
 
   In terminal
@@ -175,7 +178,7 @@ git add .
 git commit -m "initial commit"
 git remote add origin https://github.com/USERNAME/REPONAME.git
 git remote -v
-git push --set-upstream origin maste
+
 ```
 *a tutorial on how to do this is generated when you create an online repo on Github*
 
