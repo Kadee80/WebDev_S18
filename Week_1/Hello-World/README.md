@@ -71,11 +71,11 @@
 
   Now clone your forked copy of the class repo to the directory we just created on our Desktop (You are welcome to do all of this to your Documents folder instead).
 
-  Go to the [Class Repository](https://github.com/Kadee80/WebDev_Spring17).  Click on the **Clone or Download** button in the upper right. Copy the SSH link that appears.
+  Go to the [Class Repository](https://github.com/Kadee80/WebDev_S18).  Click on the **Clone or Download** button in the upper right. Copy the SSH link that appears.
 
   Back in Terminal/Command Line. Type
   ```
-  git clone https://github.com/Kadee80/WebDev_Spring17.git
+  git clone https://github.com/Kadee80/WebDev_S18.git
   ```
 
   `git clone` is the git command, the `url` that follows is the link we copied so we could clone this repo.
