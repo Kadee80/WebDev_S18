@@ -12,45 +12,87 @@
 <body>
     <!-- Here is some starter content. We will mark this up to contain a header, nav, article, section, aside, footer and more! Bonus points if you use even more semantic HTML elements in your HW this week. -->
     <!-- We will be marking this up as our main menu -->
-Online Store
-
-Home
-New Arrivals
-Accessories
-Clothing
-Footwear
-
-<!-- Lets assume we are on a product page for some sort of shoe type -->
-<!-- Since we are in the shoe section, we might want to help the user choose other shoe types easily with a sidebar -->
-Boots
-Sandals
- Flip Flops
- Flats
- Heels
- Sneakers
-    Cross Trainers
-    Running
-    Fashion
-    Slip Ons
-
-<!-- Here is where we would show thumbnail images for all of our running shoes. We are going to use placeholder kittens from https://placekitten.com/. We will reuse the same thumbnail and description 6 times.  -->
-
-<!-- Title for our page -->
-Sneakers
-<!-- Inidividual image, with caption using figure and figcaption -->
-<img src="http://placehold.it/100X100">
-This is a shoe, I swear
-$70
-Shoe #1
-<!-- Copy figure stuff X5 -->
-
-<!-- And finally, a footer for our page!  -->
-
-Shoe Store 2016
-        <!-- social links, We will cover font awesome icons next week! -->
-facebook
-twitter
-instagram
+    <header>
+        <h1>Online Store</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">New Arrivals</a></li>
+                <li><a href="#">Accessories</a></li>
+                <li><a href="#">Clothing</a></li>
+                <li><a href="#">Footwear</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Lets assume we are on a product page for some sort of shoe type -->
+    <!-- Since we are in the shoe section, we might want to help the user choose other shoe types easily with a sidebar -->
+    <aside>
+        <ul>
+            <li><a href="#">Boots</a></li>
+            <li><a href="#">Sandals</a>
+                <ul>
+                    <li>Flip Flops</li>
+                    <li>Flats</li>
+                    <li>Heels</li>
+                </ul>
+            </li>
+            <li><a href="#">Sneakers</a>
+                <ul>
+                    <li>Cross Trainer</li>
+                    <li>Running</li>
+                    <li>Fashion</li>
+                    <li>Slip Ons</li>
+                </ul>
+            </li>
+        </ul>
+    </aside>
+    <!-- Here is where we would show thumbnail images for all of our running shoes. We are going to use placeholder kittens from https://placekitten.com/. We will reuse the same thumbnail and description 6 times.  -->
+    <main>
+        <!-- Title for our page -->
+        <h2>Sneakers</h2>
+        <!-- Inidividual image, with caption using figure and figcaption -->
+        <figure>
+            <img src="http://placehold.it/500X100">
+            <figcaption>
+                <em>This is a shoe, I swear</em>
+                <br/>
+                <strong>$70</strong>
+                <br />
+                <a href="#">Shoe #1</a>
+            </figcaption>
+        </figure>
+        <figure>
+            <img src="http://placehold.it/100X100">
+            <figcaption>
+                <em>This is a shoe, I swear</em>
+                <br/>
+                <strong>$70</strong>
+                <br />
+                <a href="#">Shoe #2</a>
+            </figcaption>
+        </figure>
+        <figure>
+            <img src="http://placehold.it/100X100">
+            <figcaption>
+                <em>This is a shoe, I swear</em>
+                <br/>
+                <strong>$70</strong>
+                <br />
+                <a href="#">Shoe #3</a>
+            </figcaption>
+        </figure>
+    </main>
+    <!-- Copy figure stuff X3 -->
+    <!-- And finally, a footer for our page!  -->
+    <footer>
+        &copy; Shoe Store 2016
+    <!-- social links, We will cover font awesome icons next week! -->
+    <span>
+        <a href="#">facebook </a>
+        <a href="#">twitter </a>
+        <a href="#">instagram</a>
+    </span>
+    </footer>
 </body>
 
 </html>
