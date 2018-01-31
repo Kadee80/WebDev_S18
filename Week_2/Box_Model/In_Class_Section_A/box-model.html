@@ -1,0 +1,151 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Box Model Pixels</title>
+    <!-- internal style sheet, applies to only this page -->
+    <style type="text/css">
+      html {
+        font-size: 10px;
+      }
+      /* tag selector to apply to all divs by default on our page */
+      div {
+        border-width: 2px;
+        border-color: blue;
+        border-style: solid;
+        min-height: 20px;
+        overflow: visible;
+        border-top-color: red;
+        border: 5px solid rebeccapurple;
+      }
+      /* class selectors apply only to the elements that recive
+      the class attribute that matches*/
+
+      .container {
+        width: 900px;
+        margin: 0 auto;
+      }
+      /*now we want to make each of the thumbs stack horizontally*/
+      .thumbnail {
+        border: 1px solid #FF0000;
+        width: 298px;
+        height: 298px;
+        float: left;
+      }
+      /* clearfix hacks */
+      br.clear {
+        clear: both;
+      }
+
+      .clear-fix-1 {
+        overflow: auto;
+      }
+      /*
+      this is the proper way to clear out floats
+      the rule of thumb is after you float, you have to clear:both;
+      ::after is a pseudo class selector, this inserts an element via css called after
+      it receives content, clears both;
+      */
+      .clearfix::after {
+        content: "";
+        clear: both;
+        display: block;
+      }
+
+      .thumbnail-padding {
+        border: 5px solid #00FF00;
+        width: 270px;
+        height: 270px;
+        padding:10px;
+        float: left;
+      }
+
+      .thumbnail-margin {
+        border: 5px solid #00F0f0;
+        width: 270px;
+        height: 270px;
+        margin:10px;
+        float: left;
+      }
+
+      .thumbnail-box {
+        box-sizing: border-box;
+        width: 300px;
+        height: 300px;
+        padding: 10px;
+        border: 5px solid grey;
+        float: left;
+        /* margin doesnt get taken into account even with border-box
+        we still have to do math*/
+        margin: 5px;
+        width: 290px;
+      }
+
+      .container-inline{
+        width: 1000px;
+        margin: 0 auto;
+        font-size: 0;
+        color: blue;
+      }
+      .thumbnail-in {
+        box-sizing: border-box;
+        width: 250px;
+        border: 3px solid black;
+        display: inline-block;
+        font-size: 2rem;
+      }
+
+
+
+
+
+
+
+
+
+
+    </style>
+  </head>
+  <body>
+    <div class="container clearfix">
+      <div class="thumbnail"></div>
+      <div class="thumbnail"></div>
+      <div class="thumbnail"></div>
+    </div>
+
+    <div class="container clearfix">
+      <div class="thumbnail-padding"></div>
+      <div class="thumbnail-padding"></div>
+      <div class="thumbnail-padding"></div>
+    </div>
+
+    <div class="container clearfix">
+      <div class="thumbnail-margin"></div>
+      <div class="thumbnail-margin"></div>
+      <div class="thumbnail-margin"></div>
+    </div>
+
+    <div class="container clearfix">
+      <div class="thumbnail-box"></div>
+      <div class="thumbnail-box"></div>
+      <div class="thumbnail-box"></div>
+    </div>
+
+    <div class="container-inline">
+      <div class="thumbnail-in">
+        hello
+      </div>
+      <div class="thumbnail-in">
+        world
+      </div>
+      <div class="thumbnail-in">
+        foo
+      </div>
+      <div class="thumbnail-in">
+        bar
+      </div>
+    </div>
+
+
+
+  </body>
+</html>
