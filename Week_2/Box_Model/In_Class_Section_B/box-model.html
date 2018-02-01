@@ -1,0 +1,143 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Box Sizing Float Inline Block</title>
+    <!-- internal style sheet using a style tag in the head of our doc -->
+    <style type="text/css">
+      html {
+        font-size: 10px;
+      }
+      /* tag selector to apply a default style to all the divs on our page*/
+      div {
+        min-height: 20px;
+        overflow: visible;
+        border-color: red;
+        border-width: 2px;
+        border-style: solid;
+
+        border: 2px solid red;
+        border-left-color: green;
+      }
+
+      .container {
+        border-color: rebeccapurple;
+        border-width: 5px;
+        border-style: solid;
+
+        border: 10px solid rebeccapurple;
+        width: 900px;
+        margin: 0 auto;
+      }
+
+      .thumbnail {
+        border: 1px solid red;
+        width: 298px;
+        height: 298px;
+        float: left;
+      }
+      /* janky hacks*/
+      br.clear {
+        clear: both;
+      }
+
+      .clear-fix {
+        overflow: auto;
+      }
+      /* the proper way to write a clearfix
+      whenever we have a element with the class of clearfix,
+      insert an anonymous element with no content, make sure it clears both,
+      and displays block
+      */
+      .clearfix::after {
+        content: "";
+        clear: both;
+        display: block;
+      }
+
+      .thumbnail-pad {
+        border: 5px solid green;
+        padding: 10px;
+        width: 270px;
+        height: 270px;
+        float: left;
+      }
+
+      .thumbnail-margin {
+        border: 5px solid blue;
+        margin: 10px;
+        width: 270px;
+        height: 270px;
+        float: left;
+      }
+
+      .thumbnail-box {
+        box-sizing: border-box;
+        height: 350px;
+        width: 300px;
+        border: 5px solid grey;
+        padding: 20px;
+        float: left;
+        /*if we use margin we still have to do math*/
+        // margin: 10px;
+      }
+
+      .inline-container {
+        width: 1000px;
+        border: 1px solid black;
+        margin: 0 auto;
+        font-size: 0;
+      }
+
+      .thumb-inline{
+        box-sizing: border-box;
+        width: 250px;
+        height: 100px;
+        display: inline-block;
+        // margin-right:-4px;
+        font-size: 2rem;
+      }
+
+
+
+
+
+</style>
+</head>
+
+<body>
+  <!-- thumbs with borders and float left, clearfix -->
+    <div class="container clearfix">
+        <div class="thumbnail"></div>
+        <div class="thumbnail"></div>
+        <div class="thumbnail"></div>
+        <!-- <br class="clear" /> -->
+    </div>
+  <!-- thumbs with borders and padding and float left, clearfix -->
+    <div class="container clearfix">
+        <div class="thumbnail-pad"></div>
+        <div class="thumbnail-pad"></div>
+        <div class="thumbnail-pad"></div>
+    </div>
+    <!--  thumbs with margins. margins dont add to the dimension but still must be taken into account -->
+    <div class="container clearfix">
+        <div class="thumbnail-margin"></div>
+        <div class="thumbnail-margin"></div>
+        <div class="thumbnail-margin"></div>
+    </div>
+    <!-- box sizing to the rescue -->
+    <div class="container clearfix">
+        <div class="thumbnail-box"></div>
+        <div class="thumbnail-box"></div>
+        <div class="thumbnail-box"></div>
+    </div>
+
+    <div class="inline-container">
+      <div class="thumb-inline">Hello</div>
+      <div class="thumb-inline">World</div>
+      <div class="thumb-inline">Bar</div>
+      <div class="thumb-inline">Baz</div>
+    </div>
+</body>
+
+</html>
