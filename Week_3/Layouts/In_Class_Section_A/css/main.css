@@ -1,0 +1,98 @@
+html,
+body {
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+/* when you float you always need to clearfix
+the container element to make sure that it
+wraps around the floated content as expected */
+
+.clearfix::after {
+    display: block;
+    clear: both;
+    /* to ensure cross browser and legacy browser compatability */
+    height: 0;
+    font-size: 0;
+    content: '';
+    /* super paranoid mode */
+    visibility: hidden;
+}
+
+div,
+header,
+section,
+article,
+aside,
+footer,
+main {
+  min-height: 100px;
+  /* RGBA  */
+  background-color: rgba(0,100,255,0.2);
+}
+
+main {
+  width: 960px;
+  margin:0 auto;
+  padding: 30px;
+}
+
+article {
+  width: 580px;
+  float: left;
+  margin-right: 20px;
+}
+
+aside {
+  width: 300px;
+  float: left;
+  min-height: 500px;
+}
+
+article,
+aside {
+  padding: 20px;
+}
+
+/*
+aside ul {}
+*/
+
+ul.vertical-menu {
+  list-style-type: none;
+  padding: 0;
+}
+
+.vertical-menu li {
+
+  text-align: center;
+  border-bottom: 2px solid blue;
+}
+
+li a {
+  font-size: 18px;
+  color: purple;
+  text-decoration: none;
+  display: block;
+  padding: 10px 20px;
+}
+
+li a:hover {
+  background-color: rgba(0,100,255,0.7);
+}
+
+
+
+
+
+
+
+
+
+
+
+
