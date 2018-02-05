@@ -2,7 +2,7 @@
 
 Sometimes we need a little more control over where an element is positioned. Sometimes margins, padding, and layout grids just are not enough. We can do this using the CSS position property.
 
-###Relative Fixed and Absolute:
+### Relative Fixed and Absolute:
 
 Honestly, can’t say it any better than w3Schools. Also, CSS is a big crazy monster, and we would all get used to looking through documentation to figure out how to do exactly what we are trying to do. Here is a reference link explaining positioning:
 
@@ -13,7 +13,7 @@ Sometimes we need to position elements within elements. When we do this, we need
 
 ## Live Code - Fixed, Absolute, Relative and More
 
-###Fixed footer example:
+### Fixed footer example:
 
 Copy and paste this into a new HTML file in sublime and run it! Try resizing the window. The footer will always stick to the bottom. Where would the footer be if we didn’t give it a fixed position?
 
