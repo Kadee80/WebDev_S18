@@ -1,0 +1,49 @@
+main {
+  width: 960px;
+  margin:0 auto;
+  padding: 30px;
+}
+
+article {
+  width: 580px;
+  float: left;
+  margin-right: 20px;
+}
+
+aside {
+  width: 300px;
+  float: left;
+  min-height: 500px;
+}
+
+article,
+aside {
+  padding: 20px;
+}
+
+/*
+aside ul {}
+*/
+
+ul.vertical-menu {
+  list-style-type: none;
+  padding: 0;
+}
+
+.vertical-menu li {
+
+  text-align: center;
+  border-bottom: 2px solid blue;
+}
+
+li a {
+  font-size: 18px;
+  color: purple;
+  text-decoration: none;
+  display: block;
+  padding: 10px 20px;
+}
+
+li a:hover {
+  background-color: rgba(0,100,255,0.7);
+}

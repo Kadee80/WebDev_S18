@@ -4,14 +4,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>title</title>
+    <title>Layout 2</title>
     <meta name="author" content="">
     <meta name="description" content="">
     <meta name="keywords" content="">
-    <link rel="stylesheet" href="" type="text/css">
+    <link rel="stylesheet" href="css/main.css" type="text/css">
+    <link rel="stylesheet" href="css/layout-2.css" type="text/css">
 </head>
 
 <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#">Link 1</a></li>
+          <li><a href="#">Link 2</a></li>
+          <li><a href="#">Link 3</a></li>
+          <li><a href="#">Link 4</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+        <h1>Main content article 1 - pixels</h1>
+        <article class="col-pixels clearfix">
+            <section>
+                <h2>Section 1</h2>
+            </section>
+            <section>
+                <h2>Section 2</h2>
+            </section>
+            <section>
+                <h2>Section 3</h2>
+            </section>
+        </article>
+        <h2>Main content article 2 - percentage based layout</h2>
+        <article class="col-fluid clearfix">
+          <section>
+                <h2>Section 1</h2>
+            </section>
+            <section>
+                <h2>Section 2</h2>
+            </section>
+            <section>
+                <h2>Section 3</h2>
+            </section>
+            <section>
+                <h2>Section 4</h2>
+            </section>
+        </article>
+    </main>
+    <footer></footer>
 </body>
 
 </html>
