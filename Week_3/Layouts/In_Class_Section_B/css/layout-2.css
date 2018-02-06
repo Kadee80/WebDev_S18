@@ -1,0 +1,65 @@
+@import 'main.css';
+
+article.col-pixel {
+   width: 960px;
+   margin: 0 auto;
+}
+
+article.col-pixel section {
+ width: 300px;
+ margin: 10px;
+ float: left;
+}
+
+article.col-fluid section {
+  width: 20%;
+  margin: 0 2.5%;
+  float: left;
+}
+
+header {
+  min-height: 60px;
+  background-color: #ccc;
+}
+
+header nav {
+  float: right;
+  margin-right: 5%;
+}
+
+header ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+header li {
+  display: inline-block;
+  width: 140px;
+  text-align: center;
+}
+
+header li a {
+  display: block;
+  padding: 20px;
+  text-decoration: none;
+  color: black;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+}
+
+header li a:hover {
+  color: white;
+  background-color: #333;
+  border-bottom: 5px solid white;
+}
+
+
+
+
+
+
+
+
+
+

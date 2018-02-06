@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+}
+
+.clearfix::after {
+  display: block;
+  clear: both;
+  /* to ensure cross broswer and legacy compatibility */
+  height: 0;
+  font-size: 0;
+  content: '';
+  /* ultra paranoid */
+  visibility: hidden;
+}
+
+div,
+header,
+footer,
+main,
+section,
+aside,
+article {
+  min-height: 100px;
+  background-color: rgba(0, 100, 255, 0.2);
+}
