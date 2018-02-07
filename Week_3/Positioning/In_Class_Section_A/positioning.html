@@ -4,14 +4,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>title</title>
+    <title>Positioning</title>
     <meta name="author" content="">
     <meta name="description" content="">
     <meta name="keywords" content="">
-    <link rel="stylesheet" href="" type="text/css">
+    <style type="text/css" media="screen">
+    html,
+    body {
+        margin: 0;
+    }
+
+    header,
+    footer {
+        min-height: 50px;
+        background-color: black;
+        color: white
+    }
+
+    header {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+    }
+
+    footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+
+    main {
+        padding-top: 100px;
+    }
+
+    .absolute-t-r {
+        width: 200px;
+        height: 200px;
+        border: 5px solid red;
+        position: absolute;
+        top: 30px;
+        right: 50px;
+    }
+
+    .relative-t-r {
+        width: 200px;
+        height: 200px;
+        border: 5px solid blue;
+        position: relative;
+        top: 30px;
+        right: 50px;
+    }
+
+    .abs-in-rel {
+        width: 100px;
+        height: 100px;
+        border: 5px solid green;
+        position: absolute;
+        top: 0;
+        left: 50px;
+    }
+
+    .relative-wrapper {
+        position: relative;
+        height: 100vh;
+        width: 90vw;
+        border: 5px dotted purple;
+    }
+    </style>
 </head>
 
 <body>
+    <header>
+        <h1>Fixed Position Header</h1>
+    </header>
+    <main class="content">
+        <div class="absolute-t-r">
+            <p>I'm a absolutely positioned div. I will be default position myself based on the corners of the browser window.</p>
+        </div>
+        <div class="relative-t-r">
+            <p>I'm a relatively positioned div. I will position myself relative to where i should have rendered by default.</p>
+        </div>
+        <div class="relative-wrapper">
+            <div class="abs-in-rel">
+                <p>I am a absolutely positioned div inside a relatively positoned div.</p>
+            </div>
+        </div>
+    </main>
+    <footer>Fixed Position Footer</footer>
 </body>
 
 </html>

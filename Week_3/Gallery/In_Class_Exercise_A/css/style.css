@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script');
+/* font-family: 'Kaushan Script', cursive; */
+
+html {
+  background: url(../img/bg.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+html,
+body {
+  margin: 0;
+}
+
+.container {
+  width: 900px;
+  margin: 0 auto;
+  padding: 75px;
+}
+
+.polaroid {
+  position: relative;
+  width: 240px;
+  display: inline-block;
+  margin: 20px;
+}
+
+.polaroid img {
+  width: 100%;
+  height: auto;
+  border: 10px solid #ccc;
+  /* border-bottom: 45px solid #ccc; */
+  border-bottom-width: 45px;
+  /* h-shadow | v-shadow | blur | spread | color */
+  -webkit-box-shadow: 10px 10px 10px 5px rgba(10,10,10, 0.5);
+  -moz-box0shadow: 10px 10px 10px 5px rgba(10,10,10, 0.5);
+  box-shadow: 10px 10px 10px 5px rgba(10,10,10, 0.5);
+}
+
+.polaroid p {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  bottom: 0px;
+  font-family: 'Kaushan Script', cursive;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+/* Nav Bar Styles */
+header {
+  width: 80%;
+  padding: 0 10%;
+  height: 50px;
+  position: fixed;
+  margin-bottom: 10px;
+  z-index: 10;
+  background-color: black;
+  background: url(../img/cheap_diagonal_fabric.png);
+}
+
+header h1 {
+  color: #333;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  font-family: 'Kaushan Script', cursive;
+}
+
+nav {
+  float: right;
+  display: inline-block;
+}
+
+nav ul {
+  list-style-type: none;
+  text-align-center;
+  padding: 0;
+  margin: 0;
+  background-color: rgba(40,40,40, 0.1);
+}
+
+nav li {
+  font-family: 'Kaushan Script', cursive;
+  font-size: 18px;
+  height: 50px;
+  line-height: 50px;
+  width: 120px;
+  display: inline-block;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+  text-align: center;
+  transition: all 1s;
+}
+
+nav a:hover {
+  background-color: rgba(40,40,40, 0.5);
+  color: #fff;
+}
+
+nav a.active {
+  background-color: white;
+  color: #444;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
