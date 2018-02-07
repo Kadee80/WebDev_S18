@@ -4,14 +4,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>title</title>
+    <title>Positioning</title>
     <meta name="author" content="">
     <meta name="description" content="">
     <meta name="keywords" content="">
-    <link rel="stylesheet" href="" type="text/css">
+    <style type="text/css" media="screen">
+    .abs-t-r {
+        border: 5px solid red;
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        top: 0px;
+        right: 0px; // left:0px;
+        // bottom: 0px;
+    }
+
+    .rel-t-r {
+        border: 5px solid green;
+        width: 200px;
+        height: 200px;
+        position: relative;
+        top: 200px;
+        right: 100px;
+    }
+
+    .abs-in-rel {
+      border: 5px solid blue;
+      width: 200px;
+      height: 200px;
+      position: absolute;
+      top: 100px;
+      left: 500px
+    }
+
+    .rel-wrapper {
+      width: 80vw;
+      height: 100vh;
+      border: 5px dotted purple;
+      position: relative;
+    }
+
+    header {
+      background-color: black;
+      color: white;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 10;
+    }
+
+    footer {
+      background-color: black;
+      color: white;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 10;
+    }
+
+    </style>
 </head>
 
 <body>
+  <header>
+    <h1>im a header</h1>
+  </header>
+    <div class="abs-t-r">
+        <p>
+            I am an absolutely postioned div. Absolute positioning defaults to the entire browser window.
+        </p>
+    </div>
+    <div class="rel-t-r">
+        <p>
+            I am relatively positioned. my positioning coordinates are based off of where i should have rendered by default.
+        </p>
+    </div>
+    <!-- if you want to absolutely position an element in inside another element of the page
+(based on its parents coordinates) you have to make the parent/container element position relative -->
+  <div class="rel-wrapper">
+    <div class="abs-in-rel">
+        <p>I am an absolutely positioned div inside a relatively positioned parent div. i will position my 0,0 based on the parent coordinates not the browser window</p>
+    </div>
+  </div>
+  <footer>
+    <h2>im a footer</h2>
+  </footer>
 </body>
 
 </html>
