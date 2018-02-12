@@ -109,6 +109,80 @@ nav a.active {
   color: #444;
 }
 
+/* TRANSFORMS */
+
+.scaleUp {
+  transform: scale(1.2);
+  transition: all 1s;
+  filter: grayscale(100%);
+  z-index: 100;
+}
+
+.scaleUp:hover {
+  filter: grayscale(0%);
+}
+
+.scaleX {
+  transform: scale(2,1);
+}
+
+.scaleY {
+  transform: scale(1,2);
+}
+
+.skewX {
+  transform: skewX(20deg);
+}
+
+.skewY {
+  transform: skewY(-20deg);
+}
+
+.skewBoth {
+  transform: skew(10deg, 30deg);
+}
+
+.rotX {
+  transform: rotateX(120deg);
+}
+
+.rotY {
+  transform: rotateY(120deg);
+}
+
+.rotZ {
+  transform: rotateZ(120deg) rotateY(100deg);
+}
+
+.scaleOnHover {
+  transform: scale(0.9);
+  transition: all 5s ease;
+}
+
+.scaleOnHover:hover {
+  transform: scale(3);
+}
+
+.skewOnHover {
+  transition: all 4s linear;
+}
+
+.skewOnHover:hover {
+  transform: skewX(90deg);
+}
+
+.rotOnHover {
+  transition: all 4s linear;
+}
+
+.rotOnHover:hover {
+  transform: rotateX(90deg);
+}
+
+
+
+
+
 
 
 

@@ -1,0 +1,167 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Media Queries 101</title>
+    <style type="text/css" media="screen">
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .clearfix::after {
+        display: block;
+        clear: both;
+        height: 0;
+        font-size: 0;
+        content: '';
+        visibilty: hidden;
+      }
+
+      /* Any screen over 1024px wide will have the defaults applied*/
+      body {
+        background-color: red;
+      }
+      .container {
+        width: 1024px;
+        margin: 0 auto;
+        font-size: 0;
+      }
+
+      .thumb {
+        width: 23%;
+        margin: 1%;
+        display: inline-block;
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+
+      /* Default Navbar*/
+      header {
+        width: 100%;
+        background-color: #666;
+        line-height:30px;
+        text-align: center;
+      }
+
+      nav h1 {
+        max-width: 20%;
+        float: left;
+        font-size: 20px;
+        margin: 10px;
+      }
+
+      nav ul {
+        max-width: 80%;
+        display: block;
+        float: right;
+        list-style-type: none;
+      }
+
+      nav ul li {
+        display: inline-block;
+      }
+      nav ul li a {
+        display: block;
+        text-align: center;
+        padding: 10px 40px;
+        text-decoration: none;
+        color: #333;
+      }
+
+      nav ul li a:hover {
+        background-color: black;
+        color: white;
+      }
+
+
+
+      /* Tablet sizes */
+
+      @media only screen and (min-width: 768px) and (max-width: 1024px) {
+        body {
+          background-color: green;
+        }
+
+        .container {
+          width: 100%;
+        }
+
+        .thumb {
+          width: 45%;
+          margin: 2.5%;
+          float: left;
+        }
+      }
+
+      /* take a look at this media query, this targets device width and height */
+      @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+        body {
+           background-color: yellow;
+         }
+      }
+
+      /* smallers screens and mobile phones */
+      @media only screen and (max-width: 767px) {
+        body {
+          background-color: blue;
+        }
+
+        .container {
+          width: 100%
+        }
+
+        .thumb {
+          width: 90%;
+          margin: 5%;
+          float: left;
+        }
+
+        nav h1,
+        nav ul,
+        nav ul li {
+          min-width: 100%;
+          display:block;
+          float: none;
+          text-align: center;
+          margin: 0;
+        }
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <header class="clearfix">
+      <nav>
+        <h1>Bill Murray</h1>
+        <ul>
+          <li><a href="#">Link 1</a></li>
+          <li><a href="#">Link 2</a></li>
+          <li><a href="#">Link 3</a></li>
+        </ul>
+      </nav>
+    </header>
+
+
+    <div class="container clearfix">
+      <div class="thumb">
+        <img src="https://www.fillmurray.com/300/300" alt="Bill murray lookin cool..." title="Bill Murray"/>
+      </div>
+
+      <div class="thumb">
+        <img src="https://www.fillmurray.com/300/300" alt="Bill murray lookin cool..." title="Bill Murray"/>
+      </div>
+
+      <div class="thumb">
+        <img src="https://www.fillmurray.com/300/300" alt="Bill murray lookin cool..." title="Bill Murray"/>
+      </div>
+
+      <div class="thumb">
+        <img src="https://www.fillmurray.com/300/300" alt="Bill murray lookin cool..." title="Bill Murray"/>
+      </div>
+    </div>
+  </body>
+</html>
