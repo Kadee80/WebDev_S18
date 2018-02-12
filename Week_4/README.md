@@ -1,4 +1,4 @@
-# HW - Due Monday, Week 5
+# HW - Due Wednesday, Week 5
 
 Next week you will be presenting you midterm project proposals to your classmates. Plan on showing a blog post and optional slideshow (or combination of the 2) describing a simple multipage (minimum of 3 pages) website. Blog post / slideshow should include:
 
