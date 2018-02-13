@@ -17,6 +17,7 @@ html {
 .container {
   width: 900px;
   margin: 0 auto;
+  padding-top: 75px;
 }
 
 .polaroid {
@@ -98,7 +99,80 @@ nav a:hover {
   color: white;
 }
 
+/* Tranforms and Transitions*/
 
+.scaleUp {
+  transform: scale(1.2);
+  z-index: 100;
+}
+
+.scaleX {
+  transform: scale(2,1);
+}
+
+.scaleY {
+  transform: scale(1,2);
+}
+
+.skewX {
+  transform: skewX(-20deg);
+}
+
+.skewY {
+  transform: skewY(20deg);
+}
+
+.skewBoth {
+  transform: skew(10deg, 30deg);
+}
+
+.rotX {
+  transform: rotateX(120deg);
+}
+
+.rotY {
+  transform: rotateY(120deg);
+}
+
+.rotZ {
+  transform: rotateZ(120deg) rotateY(100deg);
+}
+
+.rotate-left {
+  transform: rotate(-10deg);
+  transition: all 5s ease;
+}
+
+.rotate-left:hover {
+  transform: rotate(10deg);
+}
+
+.skew-hover {
+  transform: skewX(30deg);
+  transition: all 5s ease;
+}
+
+.skew-hover:hover {
+  transform: skewX(-30deg);
+}
+
+.scale-hover {
+  transform: scale(0.5);
+  transition: all 5s ease;
+}
+
+.scale-hover:hover {
+  transform: scale(1.5);
+}
+
+.color-swap {
+  filter: grayscale(100%);
+  transition: all 5s ease;
+}
+
+.color-swap:hover {
+  filter: grayscale(0%);
+}
 
 
 
