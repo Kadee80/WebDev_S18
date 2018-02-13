@@ -13,8 +13,6 @@ These examples are from previous students that properly documented thier midterm
 
 [Example Midterm Proposal](http://sites.bxmc.poly.edu/~isabellaweaver/webdev/?p=9)
 
-[Example Midterm Documentation](https://samantascreations.com/2015/10/25/midterm-presentation/)
-
 ### Here are a few useful resources to help with inspiration:
 
 * [UX Inspiration Source Article](http://mediatemple.net/blog/tips/top-seven-sites-for-ux-inspiration/?utm_source=weekly_newsletter&utm_medium=email&utm_content=kylie_img&utm_campaign=02092016_newsletter&j=50758766&e=katieadee@gmail.com&l=32460871_HTML&u=372480720&mid=10825691&jb=49)
