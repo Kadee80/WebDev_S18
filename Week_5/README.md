@@ -8,12 +8,12 @@ Today you will be presenting your midterm proposals to your classmates. Please b
 
 ** All proposals are due the first class of Week 5. We will be using a simple javascript function to shuffle your names and choose presentation order at the beginning of class so be prepared! **
 
-##PSA:
+## PSA:
 *Week 6 we will be learning image optimization in Photoshop. Please have at the very least a trail version of Adobe Photoshop CC installed on your machines before class next week.*
 
 If you have not done so already, please be sure to email me your documentation/proposal link along with a link to your HW repo.
 
-#Presentation Schedule Section A:
+# Presentation Schedule Section A:
 
 - Ranti
 - May
@@ -34,7 +34,7 @@ If you have not done so already, please be sure to email me your documentation/p
 - Yixuan
 - Yurou
 
-#Presentation Schedule Section B:
+# Presentation Schedule Section B:
 
 - Val
 - Alana
