@@ -56,6 +56,7 @@ If you have not done so already, please be sure to email me your documentation/p
 - Ethan
 - Ruiqi
 - Haixin
+
 #HW - Begin building out your midterm site.
 
 Start by building out a functional wireframe with HTML and CSS. If you are still struggling with layout concepts such as block float and inline-block, next weeks tutorial on 996 Grid Framework will be helpful. You can review class notes on this [here](../Week_6/996_Grid).
