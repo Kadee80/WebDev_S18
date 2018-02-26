@@ -1,8 +1,8 @@
-#HW - Due Week 8
+# HW - Due Week 8
 
 Finish your midterm sites. You will be presenting Week 8. *We do not have class next week due to Spring Break.*
 
-##In order for your Midterm to accepted as complete you will need to provide the following:
+## In order for your Midterm to accepted as complete you will need to provide the following:
 
 1. In Class Presentation
 2. Midterm project code in Midterm/ folder on your GitHub repository
