@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Portfolio Hover Effect</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/modernizr-2.6.2.min.js"></script>
+    <style type="text/css">
+
+    
+    .view {
+        /*z-index:9;*/
+        cursor: default;
+        overflow: hidden;
+        text-align: center;
+        position: relative;
+        margin-bottom: 30px;
+        box-shadow: 0 0 3px #ddd;
+    }
+    
+    .view .mask,
+    .view .content {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        overflow: hidden;
+        top: 0;
+        left: 0;
+    }
+    
+    .view img {
+        display: block;
+        position: relative;
+    }
+    
+    .view h2 {
+        text-transform: uppercase;
+        color: #fff;
+        text-align: center;
+        position: relative;
+        font-size: 22px;
+        padding: 10px;
+        background: rgba(0, 0, 0, 0.8);
+        margin: 20px 0 0 0;
+        text-shadow: none;
+    }
+    
+    .view p {
+        font-family: Georgia, serif;
+        font-style: italic;
+        font-size: 10px;
+        position: relative;
+        color: #fff;
+        padding: 10px 20px 5px;
+        text-align: center;
+    }
+    
+    .view a.info {
+        color: #fff;
+        background: #000;
+        padding: 5px 12px;
+        text-decoration: none;
+        margin-top: 10px;
+        display: inline-block;
+        overflow: hidden;
+        text-transform: uppercase;
+    }
+    
+    .view a.info:hover {
+        background: #72c02c;
+    }
+    
+    /*CSS3 Hover Effect*/
+
+    /* set up transitions for hover */   
+    .view-portfolio img {
+/*         left: 10px;
+        margin-left: -10px; */
+        position: relative;
+        -webkit-transition: all 0.6s ease-in-out;
+        -moz-transition: all 0.6s ease-in-out;
+        -o-transition: all 0.6s ease-in-out;
+        -ms-transition: all 0.6s ease-in-out;
+        transition: all 0.6s ease-in-out;
+    }
+
+    
+    /* Transitions for mask div with text, default hide our text and links */
+    .view-portfolio .mask {
+        -webkit-transition: all 0.5s linear;
+        -moz-transition: all 0.5s linear;
+        -o-transition: all 0.5s linear;
+        -ms-transition: all 0.5s linear;
+        transition: all 0.5s linear;
+        -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        filter: alpha(opacity=0);
+        opacity: 0;
+    }
+
+    
+    .view-portfolio h2 {
+        color: #333;
+        margin: 10px 40px 0;
+        background: transparent;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+        -webkit-transform: scale(0);
+        -moz-transform: scale(0);
+        -o-transform: scale(0);
+        -ms-transform: scale(0);
+        transform: scale(0);
+        -webkit-transition: all 0.5s linear;
+        -moz-transition: all 0.5s linear;
+        -o-transition: all 0.5s linear;
+        -ms-transition: all 0.5s linear;
+        transition: all 0.5s linear;
+        -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        filter: alpha(opacity=0);
+        opacity: 0;
+    }
+    
+    .view-portfolio p {
+        color: #333;
+        -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        filter: alpha(opacity=0);
+        opacity: 0;
+        font-size: 10px;
+        -webkit-transform: scale(0);
+        -moz-transform: scale(0);
+        -o-transform: scale(0);
+        -ms-transform: scale(0);
+        transform: scale(0);
+        -webkit-transition: all 0.5s linear;
+        -moz-transition: all 0.5s linear;
+        -o-transition: all 0.5s linear;
+        -ms-transition: all 0.5s linear;
+        transition: all 0.5s linear;
+    }
+    
+    .view-portfolio a.info {
+        -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        filter: alpha(opacity=0);
+        opacity: 0;
+        -webkit-transform: scale(0);
+        -moz-transform: scale(0);
+        -o-transform: scale(0);
+        -ms-transform: scale(0);
+        transform: scale(0);
+        -webkit-transition: all 0.5s linear;
+        -moz-transition: all 0.5s linear;
+        -o-transition: all 0.5s linear;
+        -ms-transition: all 0.5s linear;
+        transition: all 0.5s linear;
+    }
+    
+    /* zoom and rotate image on hover */
+    .view-portfolio:hover img {
+        -webkit-transform: scale(2) rotate(10deg);
+        -moz-transform: scale(2) rotate(10deg);
+        -o-transform: scale(2) rotate(10deg);
+        -ms-transform: scale(2) rotate(10deg);
+        transform: scale(2) rotate(10deg);
+        -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=30)";
+        filter: alpha(opacity=30);
+        opacity: 0.3;
+    }
+    
+    /* show mask div on hover */
+    .view-portfolio:hover .mask {
+        -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)";
+        filter: alpha(opacity=100);
+        opacity: 1;
+    }
+
+
+    /* show mask div content scale from 0 to 1, and opacity from 0 to 1 */
+   .view-portfolio:hover h2,
+    .view-portfolio:hover p,
+    .view-portfolio:hover a.info {
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -o-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1);
+        -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)";
+        filter: alpha(opacity=100);
+        opacity: 1;
+    }  
+    
+
+    </style>
+</head>
+
+<body>
+    <div class="container content">
+        
+        <div class="grid_4">
+            <div class="view view-portfolio">
+                <img  src="img/1.jpg" alt="" />
+                <div class="mask">
+                    <h2>Portfolio Item</h2>
+                    <p>At vero eos et accusamus et iusto odio dignissimos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p>
+                    <a href="portfolio_item.html" class="info">Read More</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!--/container-->
+</body>
+
+</html>
