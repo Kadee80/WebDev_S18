@@ -1,0 +1,70 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<title>Responsive 996 Grid System</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<meta name="viewport" content="width=device-width">
+
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/grid.css">
+	<link rel="stylesheet" href="css/style.css">
+
+
+	<script src="js/modernizr-2.6.2.min.js"></script>
+
+</head>
+<body>
+
+<div class="container clearfix">
+	<p>6 equal columns</p>
+	<div class="grid_2"></div>
+	<div class="grid_2"></div>
+	<div class="grid_2"></div>
+	<div class="grid_2"></div>
+	<div class="grid_2"></div>
+	<div class="grid_2"></div>
+	<!-- end row 1 -->
+
+	<p>2 unequal width divs </p>
+	<div class="grid_8"></div>
+	<div class="grid_4"></div>
+	<!-- end row 2 -->
+
+	<p>Grid inside another grid using alpha and omega classes</p>
+	<div class="grid_8">
+		<div class="grid_2 alpha"></div>
+		<div class="grid_2"></div>
+		<div class="grid_2"></div>
+		<div class="grid_2 omega"></div>
+	</div>
+	<div class="grid_4">
+		<div class="grid_2 alpha"></div>
+		<div class="grid_1"></div>
+		<div class="grid_1 omega"></div>
+	</div>
+	<!-- end row 3 -->
+
+	<p>Add some offset the a column using prefex and suffix</p>
+	<div class="grid_6 prefix_2 suffix_4"> content....</div>
+
+</div>
+<!-- end .container -->
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+<script src="js/scripts.js"></script>
+</body>
+</html>
+
+
+
+
+

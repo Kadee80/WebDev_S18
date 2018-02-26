@@ -1,0 +1,72 @@
+/*
+Responsive 996px grid system ~ Style CSS.
+Copyright 2013, Josh Cope
+*/
+
+/* =============================================================================
+   Site Styles
+   ========================================================================== */
+  div {
+    background-color: rgba(0,0,255,0.25);
+    min-height: 100px;
+    outline: 1px solid black;
+  }
+
+  div::before {
+    content: attr(class) ',';
+    background-color: #eee;
+    display: block;
+    border-bottom: 1px solid gray;
+  }
+/* =============================================================================
+   Page Styles
+   ========================================================================== */
+
+/* =============================================================================
+   Media Queries
+   ========================================================================== */
+
+/* Tablet Portrait size to Base 996px */
+@media only screen and (min-width: 768px) and (max-width: 995px) {
+  body {
+    background-color: rgba(255,0,0,0.1);
+  }
+}
+
+/* All Mobile Sizes */
+@media only screen and (max-width: 767px) {
+  body {
+    background-color: #00FFFF;
+  }
+}
+
+/* Mobile Landscape Size to Tablet Portrait */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  body {
+    background-color: rgba(255,255,0,0.5);
+  }
+}
+
+/* Mobile Portrait Size to Mobile Landscape Size */
+@media only screen and (max-width: 479px) {
+  body {
+    background-color: blue;
+  }
+}
+
+
+/* =============================================================================
+   Font-Face
+   ========================================================================== */
+/* This is the proper syntax for an @font-face file
+
+/* @font-face {
+font-family: 'FontName';
+src: url('../fonts/FontName.eot');
+src: url('../fonts/FontName.eot?iefix') format('embedded-opentype'),
+url('../fonts/FontName.woff') format('woff'),
+url('../fonts/FontName.ttf') format('truetype'),
+url('../fonts/FontName.svg#FontName') format('svg');
+font-weight: normal;
+font-style: normal; }
+*/
