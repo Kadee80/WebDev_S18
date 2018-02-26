@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <style type="text/css">
+    body{
+        font-family: 'Helvetica', Arial, sans-serif;
+        line-height: 20px;
+    }
+    .infoModal {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.2);
+        z-index: 99999;
+        opacity: 0;
+        transition: opacity 400ms ease-in;
+        pointer-events: none;
+    }
+    
+    .infoModal:target {
+        opacity: 1;
+        pointer-events: auto;
+    }
+    
+    .infoModal > div {
+        width: 240px;
+        height: 240px;
+        position: relative;
+        margin: 10% auto;
+        padding: 15px;
+        background: #fff;
+    }
+    
+    .close {
+        width: 20px;
+        height: 20px;
+        background: white;
+        color: black;
+        position: absolute;
+        right: 0px;
+        text-align: center;
+        top: 0px;
+        text-decoration: none;
+    }
+    
+    .close:hover {
+        background: black;
+        color: white;
+    }
+    </style>
+</head>
+
+<body>
+<a href="#info">item with info modal</a>
+
+<a href="#info2">item with info modal</a>
+
+    <div id="info" class="infoModal">
+        <div> <a href="#close" title="Close" class="close">X</a>
+            <h2>Title</h2>
+            <p>
+                Look at me! I'm a pop up modal! 1
+            </p>
+        </div>
+    </div>
+
+    <div id="info2" class="infoModal">
+        <div> <a href="#close" title="Close" class="close">X</a>
+            <h2>Title</h2>
+            <p>
+                Look at me! I'm a pop up modal! 2
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>
