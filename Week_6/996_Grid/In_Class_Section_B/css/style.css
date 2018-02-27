@@ -6,6 +6,22 @@ Copyright 2013, Josh Cope
 /* =============================================================================
    Site Styles
    ========================================================================== */
+  div {
+    background-color: rgba(0,0,255,0.25);
+    min-height: 100px;
+    outline: 1px solid black;
+  }
+
+  div::before {
+    content: attr(class);
+    background-color: #eee;
+    display: block;
+    border-bottom: 1px solid grey;
+  }
+
+
+
+
 
 /* =============================================================================
    Page Styles
@@ -16,16 +32,32 @@ Copyright 2013, Josh Cope
    ========================================================================== */
 
 /* Tablet Portrait size to Base 996px */
-@media only screen and (min-width: 768px) and (max-width: 995px) {}
+@media only screen and (min-width: 768px) and (max-width: 995px) {
+  body {
+    background-color: red;
+  }
+}
 
 /* All Mobile Sizes */
-@media only screen and (max-width: 767px) {}
+@media only screen and (max-width: 767px) {
+  body {
+    background-color: green;
+  }
+}
 
 /* Mobile Landscape Size to Tablet Portrait */
-@media only screen and (min-width: 480px) and (max-width: 767px) {}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  body {
+    background-color: orange;
+  }
+}
 
 /* Mobile Portrait Size to Mobile Landscape Size */
-@media only screen and (max-width: 479px) {}
+@media only screen and (max-width: 479px) {
+  body {
+    background-color: purple;
+  }
+}
 
 
 /* =============================================================================

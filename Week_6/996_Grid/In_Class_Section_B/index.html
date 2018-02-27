@@ -17,16 +17,48 @@
 	<link rel="stylesheet" href="css/base.css">
 	<link rel="stylesheet" href="css/grid.css">
 	<link rel="stylesheet" href="css/style.css">
-	
+
 
 	<script src="js/modernizr-2.6.2.min.js"></script>
-	
+
 </head>
 <body>
 
-<div class="container">
-	<h1>Media Queries</h1>
-	<p>This is a just some content to fill out our container div so we can watch media queries in action. As we resize the window, we will see the background color change color based on our style.css file.</p>
+<div class="container clearfix">
+	<p>6 equal width columns</p>
+	<div class="grid_2"></div>
+	<div class="grid_2"></div>
+	<div class="grid_2"></div>
+	<div class="grid_2"></div>
+	<div class="grid_2"></div>
+	<div class="grid_2"></div>
+	<!-- end row 1 -->
+
+	<p>2 unequal column layout</p>
+	<div class="grid_8"></div>
+	<div class="grid_4"></div>
+	<!-- end row 2 -->
+
+	<p>Nested grid using some special helper classes, alpha and omega</p>
+	<div class="grid_8">
+		<div class="grid_2 alpha"></div>
+		<div class="grid_2"></div>
+		<div class="grid_2"></div>
+		<div class="grid_2 omega"></div>
+	</div>
+	<div class="grid_4">
+		<div class="grid_1 alpha"></div>
+		<div class="grid_1"></div>
+		<div class="grid_1"></div>
+		<div class="grid_1 omega"></div>
+	</div>
+	<!-- end row 3 -->
+
+	<p>Add some offset to some columns using the prefix suffix</p>
+	<div class="grid_6 prefix_3 suffix_3">
+		<div class="grid_3 alpha"></div>
+		<div class="grid_3 omega"></div>
+	</div>
 </div>
 <!-- end .container -->
 
