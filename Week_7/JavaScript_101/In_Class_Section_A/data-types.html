@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JS 101</title>
+</head>
+<!-- <body onload="sumValues(8346,987583);"> -->
+<body>
+  <!-- <button onclick="sumValues(33, 7987);">Click ME</button> -->
+  <button onclick="switchOnOff();">Toggle On Off</button>
+  <button onclick="countToN(100);">Count to 100</button>
+
+
+<script type="text/javascript">
+  /*
+  // declare and assign a string value to my var
+  var myVar = 'number';
+  console.log(myVar);
+  // reassign a value to a variable at any time
+  myVar = '4'+'4';
+  console.log(typeof(myVar));
+  // so what happens when you double myVar now?
+  myVar = myVar * 2;
+  console.log(myVar);
+  console.log(typeof(myVar));
+  myVar = '77';
+  console.log(myVar);
+  myVar = parseFloat(myVar);
+  console.log(typeof(myVar));
+  */
+
+  /*
+  // insert variables into a string message to a user
+  var temp = 73;
+  var message = 'Todays temperature is ' + temp + ' degrees F.';
+  console.log(message);
+  */
+
+  /*
+  // use parameters in a function to sum 2 values on click and on load
+  function sumValues(a,b){
+    var sum = a+b;
+    console.log('Your total charges are: ' + sum);
+  }
+
+  sumValues(10,675);
+  */
+
+
+  // booleans
+  // declare our boolean as a global variable outside of our function definition
+  var isOn = true;
+
+  function switchOnOff() {
+    if (isOn === true) {
+      alert('isOn is currently set to true, Switching to false now...');
+      isOn = false;
+    } else {
+      alert ('isOn is currently set to false, Switching to true now...');
+      isOn = true;
+    }
+  }
+
+  // use a for loop to recursively log a value
+  function countToN(n) {
+    for (var i = 0; i <= n; i++ ) {
+      console.log(i);
+    }
+  }
+
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
