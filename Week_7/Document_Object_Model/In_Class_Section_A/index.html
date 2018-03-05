@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dynamic DOM</title>
+</head>
+<body>
+  <button onclick="addSingleP();">Add a single paragraph the BAD WAY</button>
+  <button onclick="addMultiP(8);">Add 8 Paragraphs using a loop and nodes!</button>
+
+  <div id="content">
+
+  </div>
+
+  <p id="timeElapsed"></p>
+
+  <script type="text/javascript">
+    // decalre our global variables up top
+    var content;
+    // since our script loads after our html we are 'kind of' safe to do this without event delegation...stay tuned
+    content = document.getElementById('content');
+    console.log(content);
+
+    // lazy dom creation using innerHTML
+    function addSingleP() {
+      // add a p tag as a string...BAD but good in a pinch, not for production, just for debugging
+      content.innerHTML = '<p>This is a single paragraph added the bad way.</p>'
+    }
+
+    // proper dom creation using nodes
+    function addMultiP(num) {
+      //start out loop
+      for (var i = 0; i < num; i++) {
+        console.log(i);
+        // create a p element
+        var p = document.createElement('P');
+        // create some text to add into our P tags
+        var text = document.createTextNode('This is paragraph number ' + i);
+
+        // attach text inside our p tag
+        p.appendChild(text);
+        // then add the paragraph to our page inside our content div
+        content.appendChild(p);
+      }
+    }
+
+    var counter = 0;
+
+    // use setInterval to call a function every x seconds
+
+    function incrementCounter () {
+      console.log(counter);
+      var p = document.getElementById('timeElapsed');
+      p.innerHTML = counter;
+      counter += 5;
+    }
+
+    // call out setInterval directely on the browser window
+    window.setInterval(incrementCounter, 1000);
+
+
+
+
+
+
+
+
+
+  </script>
+</body>
+</html>
