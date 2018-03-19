@@ -28,6 +28,6 @@ You can add links with markdown as follows:
 
 
 ## Section B Presenation Order
-**NOTE: You will each be assigned a fellow classmate to ask a question after they have presented. (The person that presents after you) **
+**NOTE: You will each be assigned a fellow classmate to ask a question after they have presented. (The person that presents after you)**
 
 
