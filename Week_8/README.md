@@ -10,7 +10,7 @@ This week you will be presenting your midterm website projects. Your presentatio
 * What you learned in order to accomplish your project
 * Next steps –  if you had more time and more tools, what would you do next?
 
-Your design and presentation is long part of your grade. I will be looking through your source code on github later this week. 
+Your design and presentation is long part of your grade. I will be looking through your source code on github later this week.
 
 ## Source Code on Github and Link to Hosted Site (live on server)
 
@@ -25,45 +25,9 @@ You can add links with markdown as follows:
 
 **NOTE: You will each be assigned a fellow classmate to ask a question after they have presented.**
 
-- Luvneesh
-- Nicholas
-- Stephanie
-- Jane
-- Valeria
-- Alejandra
-- Lauren
-- Gilbert
 
-- Adam
-- Irka
-- Asim
-- Jason
-- Leo
-- Brendon
-- Mounir
 
-## Section C Presenation Order
+## Section B Presenation Order
 **NOTE: You will each be assigned a fellow classmate to ask a question after they have presented. (The person that presents after you) **
-- Hung
-- Mahindra
-- Arnav
-- Greta
-- Danny
 
-- Edan
-- David
-- Matthew C
-- Michelle
-- Kevin F
-
-- Michael
-- Lillian
-- Joris
-- Natalia
-- Huiwah
-
-- Hyun
-- Maria
-- Monjur
-- Kevin L
 
