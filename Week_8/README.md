@@ -48,5 +48,25 @@ You can add links with markdown as follows:
 ## Section B Presenation Order
 **NOTE: You will each be assigned a fellow classmate to ask a question after they have presented. (The person that presents after you)**
 
+- Prakriti
+- Alana
+- Val
+- Justin
+- Yitao
+- Haixin
+- Maya
+- Lucy
+- Ethan
+- Hanna
 
+- Rudhi
+- Daniel
+- Ruiqi
+- Ido
+- Mubasher
+- Lenay
+- Liam
+- Michael
+- Calvin
+- Viola
 
