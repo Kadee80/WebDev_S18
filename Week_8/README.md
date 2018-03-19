@@ -25,6 +25,24 @@ You can add links with markdown as follows:
 
 **NOTE: You will each be assigned a fellow classmate to ask a question after they have presented.**
 
+- Tayleur
+- Carolyn
+- Yixuan
+- Alice B
+- Ranti
+- Yurou
+- Darshana
+- May
+- Dylan
+
+- Alexander
+- Karen
+- Manuel
+- Kevin
+- Briana
+- Nicole
+- Cathy
+- Shiyun
 
 
 ## Section B Presenation Order
