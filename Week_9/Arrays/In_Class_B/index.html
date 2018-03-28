@@ -3,10 +3,67 @@
 <head>
   <title>Arrays</title>
   <script type="text/javascript">
-    var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    // var months;
+    // var months = [];
+    var months = ["January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December"];
+
+    console.log(months);
+    // log the length of the months array
+    console.log(months.length);
+
+    // remove the last month and store it for safe keeping in another var
+    var lastMonth = months.pop();
+    console.log("The month we removed was " + lastMonth + " our array length is now " + months.length);
+    console.log(months);
+
+    //add decemeber back to the end of our array. push and pop only grab or add to the end of an array
+    months.push(lastMonth);
+    console.log("the array is now " + months.length + " long again" );
+    months.push('fakuary');
+    console.log(months);
+    months.pop();
+
+    //grab the 6ths month in out array
+    // remember arrays index start at 0
+    console.log(months[5]);
+
+    // loop through the array and log the index and month
+    for (var i = 0; i < months.length; i++) {
+      console.log(i, months[i]);
+    }
+
+    // loop through the months array backwards and delete the last item
+    // for (i = months.length-1; i >=0; i--) {
+    //   var dm = months.pop();
+    //   console.log("deleted " + dm + " new array length is " + months.length);
+    // }
+
+    function randomNumber(n) {
+      var rn = Math.round(n * Math.random());
+      return rn;
+    }
+
+    //using our randomNumber function from the MATH section we can grab a random index in any array
+    console.log(randomNumber(18));
+    console.log(months[randomNumber(months.length-1)]);
+
   </script>
 </head>
 <body>
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
