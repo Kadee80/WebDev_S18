@@ -21,7 +21,50 @@
     console.log(Math.round(num1));
     console.log(Math.round(num2));
 
+    // Math.random() returns a random float between 0 and 1
+    var r = Math.random();
+    console.log(r);
+
+    // we can use Math.round and combine it with a conditional to get a random coin flip
+    var yn = Math.round(Math.random());
+
+    // if (yn === 0) {
+    //   alert('heads');
+    // } else {
+    //   alert('tails');
+    // }
+
+    // sometimes we need a random between 0 and N
+    function randomNumber(n) {
+      // when we declare a variable inside a function it dies in the function
+      var rn = Math.round(n * Math.random());
+      console.log( Math.round(n * Math.random()));
+    }
+
+    randomNumber(40);
+
+    // random number within a range of 2 numbers
+    function randNumRange(min, max) {
+      // a few more math expressions to get within our range
+      var rn = Math.round(Math.random() * (max-min) + min)
+      // now the function returns a value of rn what we can store in a variable elsewhere
+      return rn;
+    }
+
+    var rand1 = randNumRange(34,77);
+    var rand2 = randNumRange(507,2000);
+
+    console.log(rand1, rand2);
+
   </script>
 
 </body>
 </html>
+
+
+
+
+
+
+
+
