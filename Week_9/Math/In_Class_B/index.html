@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Math.random and some Rounding</title>
+</head>
+<body>
+
+<script type="text/javascript">
+  //floating point data types and Built in Math Functions
+
+  var z = 2.25;
+  var y = 2.65;
+  // Math.floor take a number rounds it down and returns that integer
+  var zf = Math.floor(z);
+  console.log(zf);
+
+  // Math.ceil take a number rounds it up and returns that integer
+  var zc = Math.ceil(z);
+  console.log(zc);
+
+  // Math.round taksa number and rounds up/down based on the decimal value
+  var zr = Math.round(z);
+  var yr = Math.round(y);
+  console.log(zr, yr);
+
+  // Math.random returns a random float between 0 and 1
+  var r = Math.random();
+  console.log(r);
+
+  // we can now combine this with a condition statement and Math.round to make a coin flip
+  var yn = Math.round(Math.random());
+  console.log(yn);
+
+  if (yn === 0) {
+    alert('heads!');
+  } else {
+     alert('tails!');
+  }
+
+  // but what if we want a random number between 0 and X? this is super helpful when randomly grabbing items in an array by its index...
+
+  // make a funciton with a number parameter so we can change the range evey time for a more resusable function
+  function randomNumber(n) {
+    var rn = Math.round(n * Math.random());
+    console.log(rn);
+  }
+
+  randomNumber(76);
+  randomNumber(2938562083756);
+
+  // random number function with the range provided using min and max parameter
+  function randomNumRange(min, max) {
+    var rn = Math.round(Math.random() * (max-min) + min);
+    // by returning the value rn in this function we can use this randomly generated number anywhere we call it. we can assign it to a variable, use it in a more complicated equation, or use it to grab a random index within an array
+    return rn;
+  }
+
+  var number = randomNumRange(56,789);
+  console.log(number);
+
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

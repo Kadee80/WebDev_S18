@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Event Delegation</title>
+  <style type="text/css">
+    .active {
+      color: red;
+      font-size: 3rem;
+    }
+  </style>
+
+
+</head>
+<body>
+
+<p id="toggleMe">Just a paragraph waiting for some event delegation.</p>
+<button id="alertBtn">Click to fire a function with add event listener</button>
+
+
+<script type="text/javascript">
+
+  function alertMe() {
+    alert('just another annoying alert popup window');
+  }
+
+  // watch for all contentent to be fully loaded and then execute the code within via an anonymous function
+
+  document.addEventListener('DOMContentLoaded', function () {
+    console.log('content loaded now we can do stuff');
+
+    document.getElementById('alertBtn').addEventListener('click', alertMe );
+
+    // toggle active class in classlist using an anonymous function and event listener
+    document.getElementById('toggleMe').addEventListener('click', function (event) {
+      // event object is always returned when an event fires via event listerns
+      console.log(event.target);
+      // what we usually care about in an event is the thing the event happened to
+      var element = event.target;
+      // toggle the active class on/off
+      element.classList.toggle('active');
+    });
+
+  });
+
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
