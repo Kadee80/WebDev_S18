@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Arrays 101</title>
+
+</head>
+<body>
+  <script type="text/javascript">
+  // empty variable with no type
+  //  var months;
+  //empty array, now we have access to the array object and all of its methods
+  //  var months = [];
+  // declare and add some initial values to an array
+    var months = ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'septemeber', 'october', 'november', 'december'];
+
+    console.log(months.length);
+
+    // remove the last month in the array form our months array
+    // Array.pop() removes the last item in an array and returns it
+    var lastMonth = months.pop();
+    console.log("the month we removed was " + lastMonth);
+    console.log(months.length);
+
+    // put december back in our array using Array.push()
+    months.push(lastMonth);
+    console.log(months.length);
+    console.log(months);
+
+    // grab the 6th month in our array by index
+    // remember arrays start at 0
+    console.log(months[5]);
+
+    //loop through all of the months in our array and log both the index number and month value
+    for (var i = 0; i < months.length; i++){
+      console.log(i + ": " + months[i]);
+    }
+
+    // loop through our array backwards and delete everything one by one
+    // for (var i = months.length-1; i >= 0 ; i--){
+    //   var dm = months.pop();
+    //   console.log("Deleted " + dm + " new array length is " + months.length);
+    // }
+
+    console.log(months)
+
+    function randomNumber(n) {
+      return Math.round(n * Math.random());
+    }
+
+    alert(months[randomNumber(months.length-1)]);
+
+  </script>
+
+</body>
+</html>
+
+
+
+
+
+

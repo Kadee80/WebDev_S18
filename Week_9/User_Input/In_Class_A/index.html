@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tip Calculator</title>
+  <script type="text/javascript">
+
+    document.addEventListener('DOMContentLoaded', function () {
+      document.getElementById('tipBtn').addEventListener('click', calcTip);
+    });
+
+    function calcTip() {
+      var output = document.getElementById('output');
+      // get out tip amount from our form input and make sure its a number
+      var b = document.getElementById('bill').value;
+      console.log(b, typeof(b));
+      b = parseFloat(b);
+      console.log(b, typeof(b));
+
+      //find the selected tip increment
+      var arrTip = document.getElementsByName('tip');
+      var p;
+
+      for (var i=0; i < arrTip.length; i++) {
+        if(arrTip[i].checked) {
+          p = arrTip[i].value;
+          p = parseFloat(p);
+          break;
+        }
+      }
+
+      var tip = b*p;
+      console.log (tip);
+
+      output.innerHTML = "your tip is : $" + moneyRound(tip);
+
+
+
+    }
+
+    function moneyRound(num) {
+      return Math.ceil(num * 100) / 100
+    }
+
+  </script>
+</head>
+<body>
+  <label for="">Bill: </label>
+  <input type="number" name="bill" id="bill" step="0.01">
+  <p>Tip Amount</p>
+  <label for="">5%</label><input type="radio" name="tip" value="0.05">
+  <label for="">10%</label><input type="radio" name="tip" value="0.10">
+  <label for="">15%</label><input type="radio" name="tip" value="0.15">
+  <label for="">20%</label><input type="radio" name="tip" value="0.2">
+
+  <button type="submit" id="tipBtn">Calculate Tip</button>
+  <div id="output"></div>
+</body>
+</html>
