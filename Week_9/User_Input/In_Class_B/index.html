@@ -1,18 +1,105 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Tip Calculator</title>
-</head>
-<body>
-<label for="">Bill: </label>
-  <input type="number" name="bill" id="bill" step="0.01">
-  <p>Tip Amount</p>
-  <label for="">5%</label><input type="radio" name="tip" value="0.05">
-  <label for="">10%</label><input type="radio" name="tip" value="0.10">
-  <label for="">15%</label><input type="radio" name="tip" value="0.15">
-  <label for="">20%</label><input type="radio" name="tip" value="0.2">
 
-  <button type="submit" id="tipBtn">Calculate Tip</button>
-  <div id="output"></div>
+<head>
+    <title>Tip Calculator</title>
+</head>
+
+<body>
+    <!-- every input should have a label -->
+    <label for="bill">Bill: </label>
+    <input type="number" name="bill" id="bill" step="0.01" min="0" max="500">
+    <p>Tip Amount</p>
+    <label for="">5%</label>
+    <input type="radio" name="tip" value="0.05">
+    <label for="">10%</label>
+    <input type="radio" name="tip" value="0.10">
+    <label for="">15%</label>
+    <input type="radio" name="tip" value="0.15">
+    <label for="">20%</label>
+    <input type="radio" name="tip" value="0.2">
+    <br>
+    <button type="submit" id="tipBtn">Calculate Tip</button>
+    <!-- div to display out calculated tip -->
+    <div id="output"></div>
+    <script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function() {
+        // do all this on load
+        document.getElementById('tipBtn').addEventListener('click', calcTip);
+    });
+
+    function calcTip() {
+        // grab our div for displaying results
+        var result = document.getElementById('output');
+
+        // get the total value of our bill from the input
+        var b = document.getElementById('bill').value;
+        console.log(b, typeof(b));
+        // because for values tend to come in as strings, we need to parseFloat so we can do math
+        b = parseFloat(b);
+        console.log(b, typeof(b));
+
+        //find the selected tip increment
+        var arrTip = document.getElementsByName('tip');
+        var p;
+        console.log(arrTip);
+
+        for (var i = 0; i < arrTip.length; i++) {
+            if (arrTip[i].checked) {
+                p = arrTip[i].value;
+                p = parseFloat(p);
+                break;
+            }
+        }
+        console.log(p);
+        var tip = b * p;
+        tip = moneyRound(tip);
+        var total = tip + b;
+        total = moneyRound(total);
+
+        console.log("the bill is: " + b);
+        console.log("the tip percentage is: " + p);
+        console.log("the tip amount is: " + tip);
+        console.log("the total amount is: " + total);
+
+        var p1 = document.createElement("P");
+        var p2 = document.createElement("P");
+        var p3 = document.createElement("P");
+        var p4 = document.createElement("P");
+
+        var t1 = document.createTextNode("the bill is: $" + b);
+        var t2 = document.createTextNode("the tip percentage is: $" + p);
+        var t3 = document.createTextNode("the tip amount is: $" + tip);
+        var t4 = document.createTextNode("the total amount is: $" + total);
+
+        p1.appendChild(t1);
+        p2.appendChild(t2);
+        p3.appendChild(t3);
+        p4.appendChild(t4);
+
+        result.appendChild(p1);
+        result.appendChild(p2);
+        result.appendChild(p3);
+        result.appendChild(p4);
+    }
+
+
+    function moneyRound(num) {
+      var roundNum = Math.round(num * 100)/100;
+      return roundNum;
+    }
+
+    </script>
 </body>
+
 </html>
+
+
+
+
+
+
+
+
+
+
