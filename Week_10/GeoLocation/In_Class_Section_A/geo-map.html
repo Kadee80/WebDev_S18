@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+       #map {
+        height: 800px;
+        width: 100%;
+       }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script>
+      function getLocation() {
+        // execute the location code only if the brwoser has Geolocation methods inside the navigator object
+        if (navigator.geolocation) {
+          //console.log(navigator.geolocation);
+          navigator.geolocation.getCurrentPosition(initMap);
+        } else {
+          alert('Geolocation is not supported by your browser.')
+        }
+      }
+
+      function initMap(position) {
+        // fake dummy location in case of error
+        var myLocation = {lat: -25.363, lng: 131.044};
+        //overwrite the center location and marker position before generating our map and marker
+        myLocation.lat = position.coords.latitude;
+        myLocation.lng = position.coords.longitude;
+
+        //create the map with our new center based on the users location
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 18,
+          center: myLocation
+        });
+        // create a marker and add it to the map in the users location
+        var marker = new google.maps.Marker({
+          position: myLocation,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE&callback=getLocation">
+    </script>
+  </body>
+</html>
