@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JSON and JavaScript Objects</title>
+</head>
+<body>
+
+<script type="text/javascript">
+  /*
+  var customer = {
+    firstName: 'Tony',
+    lastName: 'Pony',
+    pets: ['dog', 'cat', 'iguana']
+  }
+
+  // using dot notation we are going to access the customers first name
+  console.log(customer.firstName);
+  // how would we get the last name
+  console.log(customer.lastName);
+  // how would we access the second pet in the array?
+  console.log(customer.pets[1]);
+  // log out all of the customers pets
+  for (var i = 0; i < customer.pets.length; i++) {
+    console.log(customer.pets[i])
+  }
+  // add they key age with the value 45 to our customer object
+  customer.age = 45;
+  console.log(customer);
+  customer.age = 46;
+  console.log(customer);
+  */
+
+  var myClass = {
+    me: {
+      firstName: 'Tony',
+      lastName: 'Pony',
+      pets: ['dog', 'cat', 'iguana']
+    },
+    others: [
+      {
+        firstName: 'Sally',
+        lastName: 'Omally',
+        pet: ['butterfly', 'bird']
+      },
+      {
+        firstName: 'Billy',
+        lastName: 'Goat',
+        pet: ['snake', 'fish']
+      },
+      {
+        firstName: 'Tara',
+        lastName: 'Ohara',
+        pets: ['gecko', 'lizard']
+      }
+    ]
+  }
+
+  // 1- Tony's third pet
+  console.log(myClass.me.pets[2]);
+  // 2- Billy's last name
+  console.log(myClass.others[1].lastName);
+  // 3- the size of the others array
+  console.log(myClass.others.length);
+  // 4- the first name of all the students in the others array
+  for (var i = 0; i < myClass.others.length; i++) {
+    console.log(myClass.others[i].firstName);
+  }
+  // 5- Tara's first pet
+  console.log(myClass.others[2].pets[0]);
+
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
