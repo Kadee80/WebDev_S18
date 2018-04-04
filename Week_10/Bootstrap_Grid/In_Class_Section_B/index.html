@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Load your local css after bootstrap -->
+
+<!--     <style type="text/css" media="screen">
+      div {
+        background-color: rgba(0,0,255,0.2);
+        min-height: 100px;
+      }
+
+      div.row {
+        margin-bottom: 20px;
+      }
+    </style> -->
+    <style type="text/css" media="screen">
+      .purple {
+        background-color: rebeccapurple;
+      }
+      div {
+        border: 1px solid yellow;
+      }
+    </style>
+
+    <title>Hello, Bootstrap</title>
+  </head>
+  <body>
+    <!-- blue navbar with a logo on the left an a menu on the right with dropdown -->
+    <nav class="navbar navbar-expand-lg navbar-dark purple">
+      <!-- use the class brand for our logo text or image -->
+      <a class="navbar-brand" href="#"> LOGO </a>
+      <!-- hidden button for the hamburger menu that expands and collapses my main menu on mobile -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#myMenu"
+        aria-controls="navBarNavDropdown"
+        aria-expanded="false"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- right justified main menu using flexbox atomic css from bootstrap -->
+      <div class="collapse navbar-collapse justify-content-end" id="myMenu">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a href="#" class="nav-link active">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">About</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link disabled">Contact</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a href="#"
+              class="nav-link dropdown-toggle"
+              id="myDropdown"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Dropdown Menu
+            </a>
+            <!-- dropdown content, make sure this is inside your list item -->
+              <div class="dropdown-menu">
+                <a href="#" class="dropdown-item">Link 1</a>
+                <a href="#" class="dropdown-item">Link 2</a>
+                <a href="#" class="dropdown-item">Link 3</a>
+              </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row justify-content-around">
+        <span>Span</span>
+         <span>Span</span>
+          <span>Span</span>
+           <span>Span</span>
+      </div>
+    </div>
+
+
+    <div class="container">Container
+      <!-- basic 4 equal column layout -->
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2">col-xs-12 col-sm-6 col-md-3 col-lg-2</div>
+        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2">col-xs-12 col-sm-6 col-md-3 col-lg-2</div>
+        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2">col-xs-12 col-sm-6 col-md-3 col-lg-2</div>
+        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2">col-xs-12 col-sm-6 col-md-3 col-lg-2</div>
+      </div>
+      <!-- offsets -->
+      <div class="row">
+        <div class="col-md-4">col-md-4</div>
+        <div class="col-md-4 offset-md-4">col-md-4 offset-md-4</div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      container-fluid
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2">col-xs-12 col-sm-6 col-md-3 col-lg-2</div>
+        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2">col-xs-12 col-sm-6 col-md-3 col-lg-2</div>
+        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2">col-xs-12 col-sm-6 col-md-3 col-lg-2</div>
+        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2">col-xs-12 col-sm-6 col-md-3 col-lg-2</div>
+      </div>
+      <!-- offsets -->
+      <div class="row">
+        <div class="col-md-4">col-md-4</div>
+        <div class="col-md-4 offset-md-4">col-md-4 offset-md-4</div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <!-- nested grid -->
+      <!-- every time we use a div with the class of row, we reset our grid math back to 12 -->
+      <div class="row">
+        <div class="col-md-4">Level 1 : col-md-4
+          <div class="row">
+            <div class="col-md-6">Level 2 : col-md-6</div>
+            <div class="col-md-6">Level 2 : col-md-6</div>
+          </div>
+        </div>
+        <div class="col-md-8">Level 1 : col-md-8
+            <div class="row">
+              <div class="col-md-2">Level 2: col-md-2</div>
+              <div class="col-md-6 offset-md-4">Level 2: col-md-6</div>
+            </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
