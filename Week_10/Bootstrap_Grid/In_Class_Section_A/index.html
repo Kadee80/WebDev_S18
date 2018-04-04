@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Hello, Bootstrap Grid</title>
+    <style type="text/css" media="screen">
+      div {
+
+      }
+
+      div.row {
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+    <!-- brand logo or name always get the brand class -->
+    <a class="navbar-brand" href="#">LOGO</a>
+    <!-- hidden button for the hamburger on mobile devices -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#myMenu"
+      aria-controls="navBarNavDropdown"
+      aria-expanded="false"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- flexbox content justify end -->
+    <div class="collapse navbar-collapse justify-content-end" id="myMenu">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a href="#" class="nav-link active">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">About</a>
+        </li>
+        <li class="nav-item ">
+          <a href="#" class="nav-link disabled">Contact</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="myDropdown"
+            data-toggle="dropdown"
+            aria-has-popup="true"
+            aria-expanded="false"
+          >
+            Dropdown Link
+          </a>
+          <div class="dropdown-menu" aria-labeled-by="myDropdown">
+            <a class="dropdown-item" href="#">Link 1</a>
+            <a class="dropdown-item" href="#">Link 2</a>
+            <a class="dropdown-item" href="#">Link 3</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+    </div>
+  </nav>
+
+
+
+
+
+
+
+    <div class="container">
+      <!-- 4 3 column wide columns on a medium size screen -->
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-3">col-xs-12 col-sm-6 col-md-3</div>
+        <div class="col-xs-12 col-sm-6 col-md-3">col-xs-12 col-sm-6 col-md-3</div>
+        <div class="col-xs-12 col-sm-6 col-md-3">col-xs-12 col-sm-6 col-md-3</div>
+        <div class="col-xs-12 col-sm-6 col-md-3">col-xs-12 col-sm-6 col-md-3</div>
+      </div>
+    </div>
+    <!-- OFFSETS -->
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6 col-md-4">col-sm-6 col-md-4</div>
+        <div class="col-sm-6 col-md-4 offset-md-4">col-sm-6 col-md-4 offset-md-4</div>
+      </div>
+    </div>
+    <!-- Nested Grid, fluid layout -->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-4">Level 1: col-md-4
+          <!-- whenever you use a grid class row you have to start dividing by 12 again -->
+          <div class="row">
+            <div class="col-md-6">Level 2: col-md-6</div>
+            <div class="col-md-6">Level 2: col-md-6</div>
+          </div>
+        </div>
+        <div class="col-md-8">Level 1: col-md-8
+          <div class="row">
+              <div class="col-md-2">Level 2: col-md-2</div>
+              <div class="col-md-6 offset-md-4">Level 2: col-md-6 offset-md-4</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
