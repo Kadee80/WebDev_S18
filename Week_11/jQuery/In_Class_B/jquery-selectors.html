@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>jQuery Selectors</title>
+</head>
+<body>
+
+<div id="myID">This is a div we grab with a query selector</div>
+
+<p class="goat">Paragraph 1</p>
+<p class="goat">Paragraph 2</p>
+<p class="goat">Paragraph 3</p>
+<p class="goat">Paragraph 4</p>
+<p>Paragraph 5</p>
+
+<ul>
+  <li>Item 1</li>
+  <li class="goat">Item 2</li>
+  <li>Item 3</li>
+</ul>
+
+<!-- always load jquery before you use jquery -->
+<script
+  src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+  crossorigin="anonymous"></script>
+<!-- own custom scripts -->
+<script type="text/javascript">
+
+  // vanilla js way of waiting for the page to finishloading before adding event listeners or getting elements by id, or calling any functions that interact with the dom.
+  document.addEventListener('DOMContentLoaded', function() {
+    console.log('dom content loaded, vanilla js event listener')
+  });
+  //query way of waiting for dome to load before running a function
+  $(document).ready(function(){
+    console.log('waiting for the dom to load, the jquery way');
+  });
+
+  //document.getElementById('myID').addEventListener('click', function(event){});
+
+  $('#myID').click(function(){
+    // keyword this targets the element that was clicked
+    console.log($(this)); //identical to console.log event.target
+    $(this).html('you clicked me!') //identical to .innerHTML='you clicked me'
+  });
+
+  document.getElementsByTagName('P'); // $('p')
+  console.log($('p'));
+
+  document.getElementsByClassName('goat'); // $('.goat')
+  console.log($('.goat'));
+  var arrGoat = $('.goat');
+  // console.log(arrGoat);
+
+  // querySelector grabs the first item in the page that matches the selector
+  // querySelectorAll grabs all items that match the selector
+  var myelement = document.querySelector('p.goat');
+  console.log(myelement.innerHTML);
+
+  var myjqelement = $('li.goat');
+  console.log(myjqelement.html());
+
+  console.log($('li:first'));
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
