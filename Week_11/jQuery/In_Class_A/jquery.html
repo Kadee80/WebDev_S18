@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Hello, jQuery</title>
+  </head>
+  <body>
+    <h1>Hello, jQuery</h1>
+
+    <p class="mouseMe">This is  paragraph with mouse enter and mouse leave attached via jQuery</p>
+
+    <button class="btn btn-primary" id="dblClickMe">Double click to fire an event!</button>
+
+    <!-- Hide show buttons that hide/show another element on the page -->
+    <button class="btn btn-danger" id="hideMe">Hide</button>
+    <button class="btn btn-success" id="showMe">Show</button>
+    <button class="btn btn-warning" id="toggleMe">Toggle Visibility</button>
+
+    <div class="card card-body bg-light">This is a div that will hide and show based on our button clicks</div>
+
+    <div class="card">This is a div that will not hide and show based on our button clicks, because we used :first</div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- always load our custom scripts last! -->
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+
+        //grouped mouse events
+        $('.mouseMe').on({
+          mouseenter: function () {
+            console.log('a mouse entered the paragraph');
+          },
+          mouseleave: function () {
+            console.log('a mouse just left the paragraph');
+          }
+        });
+
+        $('#dblClickMe').dblclick(function(){
+          alert('Double Clicked!')
+        });
+
+        $('#hideMe').click(function(){
+          $('.card:first').hide();
+        });
+
+        $('#showMe').click(function(){
+          $('.card:first').show();
+        });
+
+        $('#toggleMe').click(function(){
+          $('.card:first').toggle();
+        });
+
+
+      });
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
