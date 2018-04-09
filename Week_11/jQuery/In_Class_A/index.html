@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Jquery Selector</title>
+</head>
+<body>
+
+  <div id="myID">This is a div we will grab with a jquery id selector.</div>
+
+  <p class="goat">Paragraph 1</p>
+  <p class="goat">Paragraph 2</p>
+  <p class="goat">Paragraph 3</p>
+  <p class="goat">Paragraph 4</p>
+
+  <ul>
+    <li class="goat">Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+  </ul>
+
+<!-- always load jquery before you start writing or using jquery syntax -->
+<script
+  src="https://code.jquery.com/jquery-3.3.0.min.js"
+  integrity="sha256-RTQy8VOmNlT6b2PIRur37p6JEBZUE7o8wPgMvu18MC4="
+  crossorigin="anonymous"></script>
+  <!-- our own custom jquery functions etc... -->
+  <script type="text/javascript">
+    // the old vanilla js way of waiting for the page to load
+    // document.addEventListener('DOMContentLoaded', function() {
+    //   // anonymous function
+    //   console.log('long hand js way of waiting for stuff to load')
+    // });
+
+    // document.addEventListener('DOMContentLoaded', init);
+    // function init() {
+    //   // stuff to do on load...
+    // }
+
+    //onLoad the jquery way
+    $(document).ready(function() {
+      console.log('waiting for the page to load the jq way');
+      add event listeners using the old school way
+      document.getElementById('myID').addEventListener('click', function() {
+        //do stuff here on click
+      });
+      // the # lets jquery know i'm looking for an ID selector
+      $('#myID').click(function () {
+        //the keyword this targets the thing that was clicked (thing event.target in vanilla js)
+        console.log($(this));
+        $(this).html('you clicked me!'); // same as event.target.innerHTML
+      });
+
+      //document.getElementsByTagName('P')// $('p')
+      //console.log($('p'))
+      var arrElements = $('p');
+      console.log(arrElements);
+
+      // document.getElementsByClassName('goat');
+      console.log($('.goat'));
+      // be more specific and only grab the list items with the class of goat
+      console.log($('li.goat'));
+
+      // querySelector only grabs the first element that matches the query
+      document.querySelector('li')
+      console.log(document.querySelector('li'));
+      // querySelectorAll grabs all instances that match the query as an array
+      console.log(document.querySelectorAll('li'));
+
+      console.log($('li:first'));
+
+
+    });
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
