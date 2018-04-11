@@ -77,7 +77,7 @@ Today we are going to continue with a simple timeline example. We got our HTML s
  body {
  text-align: center;
  }
- 
+
  .progress {
  position: relative;
  z-index: 3;
@@ -123,23 +123,23 @@ Live Code:
 
 When we want a little more control over an animation sequence we can create a GSAP Timeline object. Rather than keeping track of how much we need to delay to start of each animation from the beginning of the first animation, we can add them one by one to a Timeline object.
 
-```javascript
+```
 tl = new TimelineLite();
 ```
 
 Now that we have a Timeline object we can use .add() and add each Tween one by one. Each animation will wait for the previous one to complete before executing. No more Delays!
 
-```javascript
+```
 tl.add( TweenMax.to(element, 1, {opacity:1}) );
 tl.add( TweenMax.to(element, 1, {y:200}) );
 ```
 OR we can skip a step and just concatenate each step in the order we want to add them.
 
-```javascript
+```
 tl.to(element, 1, {opacity:1}).to(element, 1, {y:200});
 ```
 What if we want a delay between animations, or what if we want an animation to execute before the previous one finishes? We can add a positive or negative delay as a 4th parameter.
 
-```javascript
+```
 tl.to(element, 1, {opacity:1}).to(element, 1, {y:200},"+=1");
 ```
