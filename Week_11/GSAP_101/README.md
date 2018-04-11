@@ -109,12 +109,17 @@ We are going to use a new jQuery method today:
 
 In our HTML we have 2 <h1> tags, so if we use jQuery to select elements by tag name like so:
 
+```
 var $h1s = $("h1");
 console.log($h1s);
+```
+
 Whats with the $ before the variable name? We do this to keep track of our jQuery variables. Not necessary but useful. When we console log out out $h1s variable we see we have an array. If we want to pull out an element in a set/array we can do this using .eq(); for example:
 
+```
 var $hello = $("h1").eq(0);
 console.log($hello.html());
+```
 You’ll notice jQuery gives us another shortcut method. Rather than typing .innerHTML we can type .html() to get the contents of an element.
 
 Live Code:
