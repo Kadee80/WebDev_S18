@@ -107,7 +107,7 @@ We are going to use a new jQuery method today:
 
 .eq()
 
-In our HTML we have 2 <h1> tags, so if we use jQuery to select elements by tag name like so:
+In our HTML we have 2 `<h1>` tags, so if we use jQuery to select elements by tag name like so:
 
 ```
 var $h1s = $("h1");
@@ -120,6 +120,7 @@ Whats with the $ before the variable name? We do this to keep track of our jQuer
 var $hello = $("h1").eq(0);
 console.log($hello.html());
 ```
+
 You’ll notice jQuery gives us another shortcut method. Rather than typing .innerHTML we can type .html() to get the contents of an element.
 
 Live Code:
