@@ -2,8 +2,72 @@
 <html>
 <head>
   <title>GSAP 101</title>
+  <style type="text/css" media="screen">
+
+    #sb {
+      position: absolute;
+      top: 500px;
+      left: 0;
+    }
+
+  </style>
 </head>
 <body>
 
+<img src="img/soccer-ball.png" id="sb"/>
+<!-- 5 basketballs to bounce -->
+<img src="img/basket-ball.png" class="bball" />
+<img src="img/basket-ball.png" class="bball" />
+<img src="img/basket-ball.png" class="bball" />
+<img src="img/basket-ball.png" class="bball" />
+<img src="img/basket-ball.png" class="bball" />
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenMax.min.js"></script>
+<script type="text/javascript">
+  // always load GSAP before we start trying to use it!
+
+  //grab our soccer ball as a var
+  var sb = document.getElementById('sb');
+
+  //Use the GSAP TweenMax Class to animate the ball position and then rotation and scale over time
+  //TweenMax.to(sb, 3, {left: 800, top: 300})
+  TweenMax.to(sb, 3, {x:800, y:-500, rotation: 720, scale: 0.5, ease:Elastic.easeOut});
+
+  TweenMax.staggerTo('.bball', 1, {y: 500, rotation: 360, delay: 3, ease: Bounce.easeOut}, 0.5);
+
+  TweenMax.to('#sb, .bball', 2, {opacity: 0, delay: 5, onComplete: imDone});
+  //callback function that gets fired onComplete of animation
+  function imDone() {
+    alert("i'm done")
+  }
+
+</script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

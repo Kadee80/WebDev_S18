@@ -2,8 +2,89 @@
 <html>
 <head>
   <title>Timeline</title>
+  <style type="text/css" media="screen">
+    body {
+      text-align: center;
+    }
+
+    .progress {
+      position: relative;
+      z-index: 3;
+      width: 100%;
+      height: 20px;
+      background-color: black;
+    }
+
+    h2, p {
+      text-shadow: 4px 4px 8px rgba(0,0,0, 0.5);
+      position: relative;
+    }
+
+  </style>
 </head>
 <body>
 
+<div class="progress"></div>
+<div id="page-wrap">
+  <h2>Hello GreenSock</h2>
+  <h2>You're Awesome</h2>
+  <p>I just did my first timeline and that is pretty cool.</p>
+</div>
+
+<script
+  src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenMax.min.js"></script>
+<script type="text/javascript">
+
+  // use jquery to wait for the com content to fully load.
+  $(document).ready(function(){
+    // this is where we do any get element by ____ cause the dom has fully loaded
+
+    //grab the first h2 in an array of h2s. its an array because we are grabbing by tag name
+    var $hello = $('h2').eq(0);
+    console.log($hello);
+    var $awesome = $('h2').eq(1),
+    $text = $('p'),
+    $progress = $('.progress'),
+    $bg = $('#page-wrap');
+
+    //set initial perspective, thing cameras in 3d modeling programs
+    CSSPlugin.defaultTransformPerspective = 800;
+
+    //instantiate a new timeline object
+    var tl = new TimelineLite();
+
+    tl.from($bg, 1, {opacity: 0}) // initial fade in of all content
+    .from($hello, 0.5, {left: -500, opacity: 0})
+    .from($awesome, 0.5, {right: -500, opacity: 0})
+    .from($text, 0.8, {top: 50, opacity: 0}, "+=1.0")
+    .from($progress, tl.duration(), {scaleX: 0, transformOrigin: 'left'}, 0)
+    .to($progress, 0.2, {opacity: 0, top: -10});
+
+
+  })
+
+
+
+
+</script>
 </body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </html>
