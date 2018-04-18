@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>GOATS IN SPACE!</title>
+    <link href='http://fonts.googleapis.com/css?family=Asap:400,700' rel='stylesheet' type='text/css'>
+    <style type="text/css">
+    body {
+        background-color: black;
+        margin: 5% 15% 0 15%;
+        overflow: hidden;
+    }
+
+    .img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .box {
+        text-align: center;
+        float: right;
+        width: 150px;
+        height: 150px;
+        margin: 10px;
+    }
+
+    #wrapper {
+        width: 510px;
+        margin: 0 auto;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div class="box">
+            <img class="img" src="img/goat.jpg" />
+        </div>
+        <div class="box">
+            <img class="img" src="img/goat2.jpg" />
+        </div>
+        <div class="box">
+            <img class="img" src="img/goat3.jpg" />
+        </div>
+        <div class="box">
+            <img class="img" src="img/goat.jpg" />
+        </div>
+        <div class="box">
+            <img class="img" src="img/goat2.jpg" />
+        </div>
+        <div class="box">
+            <img class="img" src="img/goat3.jpg" />
+        </div>
+        <div class="box">
+            <img class="img" src="img/goat.jpg" />
+        </div>
+        <div class="box">
+            <img class="img" src="img/goat2.jpg" />
+        </div>
+        <div class="box">
+            <img class="img" src="img/goat3.jpg" />
+        </div>
+    </div>
+    <!-- load scripts after dom has been rendered -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+    <!-- Our custom script -->
+    <script type="text/javascript">
+
+    // helpFunction for randomNumbers!
+    function randomNumber(min, max) {
+        return Math.floor(Math.random() * (max - min) + min );
+    }
+
+    // instantiate a new timeline object
+    tl = new TimelineMax({
+        delay: 0.5,
+        repeat: -1
+    });
+
+    //add an explode label 10 seconds in to the timeline, after the reset animation is done
+    tl.add('explode', "+=10");
+
+    // IMG timeline
+    $('.img').each(function(index){
+        //animate them in
+        tl.from(this, 5, {
+            delay: 0.1,
+            scale: -1,
+            x: randomNumber(-1000, 2500),
+            y: randomNumber(-500, 1000),
+            z: -1,
+            opacity: 0,
+            rotation: randomNumber(-180,180)
+        }, Math.random() * 1.5);
+
+        //animate them out after waiting 10 seconds using our explode label
+        tl.to(this, 5, {
+            x: randomNumber(-1000, 2500),
+            y: randomNumber(-500, 1000),
+            z: randomNumber(100, 500),
+            opacity: 0,
+            rotation: randomNumber(360,720),
+            rotationX: randomNumber(-360,360),
+            rotationY: randomNumber(-360,360)
+        }, 'explode+=' + Math.random() * 0.5)
+    });
+
+    //click to center a goat
+    var $img = $('.box');
+
+    // assign a function on click
+    $img.click(function(){
+        // calculate the distance from the x and y center
+        var centerX = ($(window).width()/2 -75);
+        var centerY = ($(window).height()/2 -150);
+        var Pos = $(this).position();
+        var distX = centerX-Pos.left;
+        var distY = centerY-Pos.top;
+        console.log(centerX, centerY);
+        console.log(distX, distY);
+        // tween to an x y position based on our calculated vetor to the center of the screen
+        TweenMax.to(this, 1, {
+            x: distX,
+            y: distY,
+            z:100,
+            scale: 3,
+            ease: Power2.easeIn
+        })
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+   <body>
+  </html>
