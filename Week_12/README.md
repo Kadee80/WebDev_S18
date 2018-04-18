@@ -2,12 +2,12 @@
 
 Keep working on your final projects.
 
-[Install Ruby](https://www.ruby-lang.org/en/documentation/installation/) on your computers before Monday's class. 
+[Install Ruby](https://www.ruby-lang.org/en/documentation/installation/) on your computers before Monday's class.
 [Install SASS](http://sass-lang.com/install)
 
 *Spoiler, we are going to take a look at SASS*
 
-###Install SASS using command line:
+### Install SASS using command line:
 
 ```bash
 gem install sass
