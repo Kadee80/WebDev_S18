@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Elevator Scrolling Example</title>
+  <style type="text/css" media="screen">
+    body {
+      font-family: Arial, sans-serif;
+      margin-top: 40px;
+      /*visibility: hidden;*/
+      background-color: black;
+      color: white;
+    }
+
+    #main {
+      margin: 0 auto;
+      width: 800px;
+    }
+
+    section {
+      padding: 20px 0 80px 0;
+      height: 100vh;
+    }
+
+    h2 {
+      font-size: 48px;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 20px;
+    }
+
+    ul {
+      position: fixed;
+      top: 40%;
+      right: 0;
+      list-style: none;
+    }
+
+    li {
+      width: 30px;
+      padding: 10px;
+      margin-bottom: 1px;
+      background-color: #111;
+      color: #ccc;
+      border-left: 10px solid #333;
+      cursor: pointer;
+    }
+
+    .active {
+      color: #FFF;
+      border-left: 20px solid #FFF;
+      line-height: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <div>
+    <ul>
+      <li id="floor5Btn">5</li>
+      <li id="floor4Btn">4</li>
+      <li id="floor3Btn">3</li>
+      <li id="floor2Btn">2</li>
+      <li id="floor1Btn">1</li>
+    </ul>
+
+    <div id="main">
+      <section id="floor5Panel">
+        <h2>Floor 5</h2>
+      </section>
+
+      <section id="floor4Panel">
+        <h2>Floor 4</h2>
+      </section>
+
+      <section id="floor3Panel">
+        <h2>Floor 3</h2>
+      </section>
+
+      <section id="floor2Panel">
+        <h2>Floor 2</h2>
+      </section>
+
+      <section id="floor1Panel">
+        <h2>Floor 1</h2>
+      </section>
+
+    </div>
+  </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenMax.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/plugins/ScrollToPlugin.min.js"></script>
+<script
+  src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+  crossorigin="anonymous"></script>
+<script type="text/javascript">
+  // wait for the apge to load before exectuing any js jq
+  $(document).ready(function(){
+
+  // make the items fade in on load
+  TweenLite.from($('body'), 0.5, {autoAlpha: 0});
+  // make the menu slide in from off the screen
+  TweenLite.from($('ul'), 0.5, {right: -500, delay: 0.5});
+
+  // grab each button by id and assign them to variables
+  var $floor1Btn = $('#floor1Btn'),
+  $floor2Btn = $('#floor2Btn'),
+  $floor3Btn = $('#floor3Btn'),
+  $floor4Btn = $('#floor4Btn'),
+  $floor5Btn = $('#floor5Btn'),
+  // pass all of the list items from the menu into an array
+  $navButtons = $('li');
+
+  // add and remove the active class on mouseEnter and mouseLeave
+  $navButtons.mouseenter(function(){
+    TweenLite.to(this, 0.2, {className: '+=active'})
+  });
+
+  $navButtons.mouseleave(function(){
+    TweenLite.to(this, 0.2, {className: '-=active'})
+  });
+
+  // set the scroll position to the top of each of the floor divs
+  console.log($('#floor1Panel').offset());
+  console.log($('#floor1Panel').offset().top);
+
+  // assign an HTML5 data attribute each of our buttons
+  // our scroll position will be based on position we get from jquery offset
+  $floor1Btn.attr('data-scrollpos', $('#floor1Panel').offset().top);
+  $floor2Btn.attr('data-scrollpos', $('#floor2Panel').offset().top);
+  $floor3Btn.attr('data-scrollpos', $('#floor3Panel').offset().top);
+  $floor4Btn.attr('data-scrollpos', $('#floor4Panel').offset().top);
+  $floor5Btn.attr('data-scrollpos', $('#floor5Panel').offset().top);
+
+  // assign a function onclick to each of the nav buttons from out array of list items
+  $navButtons.click(function(){
+    // pull out the scroll position from our data attributes
+    var myScrollPos = $(this).attr('data-scrollpos');
+    console.log(myScrollPos);
+    TweenLite.to(window, 2, {
+      scrollTo: myScrollPos,
+      ease: Back.easeOut
+    });
+  })
+
+  // animate to floor 1 every time the page reloads
+  var initialFloor = $('#floor1Btn').attr('data-scrollpos');
+
+  TweenLite.to(window, 1, {scrollTo: initialFloor})
+  });
+
+
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
