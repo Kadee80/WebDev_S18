@@ -1,0 +1,116 @@
+@import "vars";
+// grid variables
+$grid-columns: 12;
+$grid-max-width: 90%;
+$gutter: 1%;
+// breakpoints
+$breakpoint-mobile-only: "only screen and (max-width: 768px), only screen and (max-device-width: 768px)";
+$breakpoint-ipad: "only screen and (min-device-width: 768px) and (max-device-width: 1024px)";
+$breakpoint-small: "only screen and (max-device-width: 768px), only screen and (max-width: 768px)";
+$breakpoint-medium: "only screen and (min-device-width: 769px) and (min-width: 769px)";
+$breakpoint-large: "only screen and (min-device-width: 1024px) and (min-width: 1-24px)";
+$breakpoint-xl: "only screen and (min-device-width: 1200px) and (min-width: 1200px)";
+
+@mixin border-box {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    @include border-box();
+}
+
+@mixin clear-fix() {
+    &:after {
+        display: block;
+        clear: both;
+        /* ensure some older compatability */
+        height: 0;
+        font-size: 0;
+        content: " ";
+        /* extra backup */
+        visibility: hidden;
+    }
+}
+
+@mixin container() {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-size: 1em;
+    overflow-x: hidden;
+    position: relative;
+    @media #{$breakpoint-medium} {
+        max-width: $grid-max-width;
+    }
+}
+
+@mixin grid-row () {
+    //font-size: 0;
+    width: 100%;
+    *zoom: 1;
+    &:before,
+    &:after {
+        content: " ";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+// This is column mixins.
+@mixin grid-col ($col, $align: top, $first: false, $last: false) {
+    width: 98%;
+    display: block;
+    //font-size: 16px;
+    padding: 0%;
+    margin: 0;
+    vertical-align: top;
+
+    @media #{$breakpoint-medium} {
+        display: inline-block;
+        width: percentage($col/$grid-columns);
+        vertical-align: $align;
+        padding-left: if($first, 0, $gutter);
+        padding-right: if($last, 0, $gutter);
+        margin-right: -4px;
+    }
+}
+
+@mixin offset-col($left, $right) {
+    @media #{$breakpoint-medium} {
+        margin-left: percentage($left/$grid-columns)-1%;
+        margin-right: percentage($right/$grid-columns)-1%;
+    }
+}
+
+@mixin aspect-ratio($width, $height) {
+    position: relative;
+    &:before {
+        display: block;
+        content: " ";
+        width: 100%;
+        padding-top: ($height / $width) * 100%;
+    }
+    > .content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+}
+
+@mixin flex-row() {
+  display: flex;
+  flex-direction: column;
+  @media #{$breakpoint-medium} {
+    flex-direction: row;
+  }
+  justify-content: space-between;
+  align-items: center;
+}

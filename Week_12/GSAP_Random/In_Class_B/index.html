@@ -65,5 +65,97 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
     <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
     <!-- Our custom script -->
+    <script type="text/javascript">
+
+    //random number helper function
+    function randomNumber (min, max) {
+        return Math.round(Math.random() * (max-min) + min);
+    }
+
+    //instatiate a new timeline object
+    tl = new TimelineMax({
+        delay: 0.5,
+        repeat: -1
+    });
+
+    // add a timeline label to re-explode the goat grid after the animation is done
+    tl.add('explode', '+=30');
+
+    //image timeline
+    $('.img').each(function(index){
+        tl.from(
+            this, 5, {
+                delay: 0.5,
+                scale: -1,
+                x: randomNumber(-1000, 2000),
+                y: randomNumber(-500, 1000),
+                z: -1,
+                opacity: 0,
+                rotation: randomNumber(-180,180)
+            }, Math.random() * 2
+        )
+
+        tl.to(
+            this, 5, {
+                x: randomNumber(-1000, 2000),
+                y: randomNumber(-500, 1000),
+                z: randomNumber(100,500),
+                opacity: 0,
+                rotation: randomNumber(360,720),
+                rotationX: randomNumber(-360,360),
+                rotationY: randomNumber(-360,360),
+            }, 'explode+=' + Math.random() * 1
+        )
+    });
+
+
+    var $img = $('.box');
+
+    $img.click(function(){
+       //calculate the distance from the current location to the center of the window
+       var centerX = ($(window).width() / 2 - 75);
+       var centerY = ($(window).height() / 2 - 150);
+
+       // get the position on the screen of the clicked item
+       var Pos = $(this).position();
+
+       // find the difference in x and y for animating to the center
+       var distX = centerX - Pos.left;
+       var distY = centerY - Pos.top;
+
+       TweenMax.to(this, 1, {
+        x: distX,
+        y: distY,
+        z: 100,
+        scale: 3,
+        ease: Power2.easeIn
+       })
+    })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
    <body>
   </html>
