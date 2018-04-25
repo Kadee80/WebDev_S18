@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>SASS Crash Course</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+
+<body>
+    <header>
+        <a href="#" class="brand">
+            <h1 class="top-nav-logo">Goats R Us</h1>
+        </a>
+        <div id="nav-collapse">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+        <nav>
+            <ul id="main">
+                <li>
+                    <a href="" class="menu-toggle" data-dropdown=".products">Products</a>
+                </li>
+                <li>
+                    <a href="" class="menu-toggle" data-dropdown=".company">Company</a>
+                </li>
+                <li>
+                    <a href="" class="menu-toggle" data-dropdown=".resources">Resources</a>
+                </li>
+                <li>
+                    <a href="">Buy</a>
+                </li>
+            </ul>
+            <section id="dropdown">
+                <ul class="products">
+                    <li class="mobile">Products</li>
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
+                    <li></li>
+                </ul>
+                <ul class="company">
+                    <li class="mobile">Company</li>
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#" target="_blank">Link</a></li>
+                    <li><a href="#">Link</a></li>
+                </ul>
+                <ul class="resources">
+                    <li class="mobile">Resources</li>
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#" target="_blank">External Link</a></li>
+                </ul>
+            </section>
+        </nav>
+        <br style="clear:both">
+    </header>
+    <div id="nav-spacer">&nbsp;</div>
+    <main>
+        <section class="goats">
+
+            <div class="image-gallery">
+                <div class="navigation">
+                    <div id="navigation-dots"></div>
+                </div>
+                <div class="img-wrapper">
+                    <img src="http://placehold.it/175x175" />
+                    <img src="http://placehold.it/175x175"  />
+                    <img src="http://placehold.it/175x175" />
+                    <img src="http://placehold.it/175x175"  />
+                    <img src="http://placehold.it/175x175"  />
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous">
+    </script>
+    <script src="js/nav.js"></script>
+    <script src="js/gallery.js"></script>
+</body>
+
+</html>
