@@ -47,4 +47,135 @@ header {
         }
     }
 
+    nav {
+        float: right;
+        width: 500px;
+        line-height: 40px;
+        padding-right: 20px;
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            text-transform: uppercase;
+            li {
+                display: inline-block;
+                width: 130px;
+                &:last-child {
+                    width: 50px;
+                }
+                a {
+                    color: rgba(0, 0, 0, 0.6);
+                    text-decoration: none;
+                    display: block;
+                    transition: color 1s;
+                    &:hover {
+                        color: rgba(0, 0, 0, 1);
+                    }
+                    &.active {
+                        color: rgba(0, 0, 0, 1);
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+        section#dropdown {
+            float: right;
+            width: 500px;
+            line-height: 20px;
+            ul {
+                display: inline-block;
+                width: 130px;
+                text-transform: none;
+                li {
+                    &.mobile {
+                        display: none;
+                    }
+                    a {
+                        transition: all 0.5s ease-out;
+                        white-space: nowrap;
+                        &:hover {
+                            padding-left: 7px;
+                        }
+                    }
+                }
+            }
+        }
+        div#nav-collapse {
+            display: none;
+        }
+    }
+}
+
+div#nav-spacer {
+    height: 0px;
+    width: 100%;
+    transition: all 0.6s linear;
+    &.nav-open {
+        height: 90px;
+    }
+}
+
+@media (max-width:768px),
+screen and (max-device-width: 768px) {
+    header {
+        padding: 5px 0 0 0;
+        background: none;
+        background-color: white;
+        nav {
+            width: 100%;
+            float: none;
+            ul#main {
+                display: none;
+            }
+            section#dropdown {
+                width: 100%;
+                text-align: center;
+
+                ul {
+                    width: 98%;
+                    display: block;
+                    padding: 2% 1%;
+
+                    li {
+
+                        display: block;
+                        padding: 1%;
+                        font-size: 16px;
+                        &.mobile {
+                            display: block;
+                            font-weight: 800;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    div#nav-collapse {
+        float: right;
+        display: block;
+        width: 50px;
+        cursor: pointer;
+        padding-right: 20px;
+        .bar1,
+        .bar2,
+        .bar3 {
+            width: 35px;
+            height: 5px;
+            background-color: #006fff;
+            margin: 6px 0;
+            transition: 0.4s;
+            border-radius: 2px;
+        }
+        &.change {
+            .bar1 {
+                transform: rotate(-45deg) translate(-9px, 6px);
+            }
+            .bar2 {
+                opacity: 0;
+            }
+            .bar3 {
+                transform: rotate(45deg) translate(-8px, -8px);
+            }
+        }
+    }
 }
