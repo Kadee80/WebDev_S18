@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SASS 101</title>
+	<link rel="stylesheet" type="text/css" href="CSS/main.css">
+</head>
+<body>
+
+	<div class="container">
+		<div class="gallery" id="gallery">
+			<ol class="thumbs">
+				<li data-thumb="top">top</li>
+				<li data-thumb="bottom">bottom</li>
+				<li data-thumb="left">left</li>
+				<li data-thumb="right">right</li>
+			</ol>
+			<div class="figure right" id="figure">
+				<img class="top" src="http://via.placeholder.com/350x350?text=top">
+				<img class="bottom" src="http://via.placeholder.com/350x350?text=bottom">
+				<img class="left" src="http://via.placeholder.com/350x350?text=left">
+				<img class="right" src="http://via.placeholder.com/350x350?text=right">
+			</div>
+		</div>
+	</div>
+
+	<!-- aspect ratio demo -->
+	<div class="ratio-demo">
+		<div class="content">
+			I have a fixed aspect ratio!
+		</div>
+	</div>
+
+	<script type="text/javascript">
+
+
+		// access a custom data attribute via javascript
+		// toggle the visible image
+
+		// declare some global variables
+		var gallery, figure, thumbs;
+		// wait for our content to load before applying event listeners
+		document.addEventListener('DOMContentLoaded', function () {
+			gallery = document.getElementById('gallery');
+			figure = document.getElementById('figure');
+			// grab all of our list items in our ol
+			thumbs = document.getElementsByTagName('LI');
+			console.log(thumbs);
+			// loop through them and add event listeners
+			for (var i = 0; i < thumbs.length; i++) {
+				thumbs[i].addEventListener('click', function(e){
+					var el = e.target;
+					console.log(el.dataset.thumb);
+					console.log(figure.classList);
+					// clear out all extra classnames
+					figure.classList = ['figure'];
+					// add the clicked list items className to figure to display the right image
+					figure.classList.add(el.dataset.thumb);
+
+				});
+			}
+		});
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

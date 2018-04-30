@@ -1,0 +1,89 @@
+.container {
+    width: 960px;
+    margin: 0 auto;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas: 'cat dog';
+}
+
+.gallery ol.thumbs {
+    grid-area: cat;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 1rem;
+}
+
+.gallery ol.thumbs li {
+    line-height: 2rem;
+    height: 2rem;
+    min-width: 3rem;
+    padding: 1rem;
+    background-color: blue;
+    border-radius: 1rem;
+    font-family: Helvetica, sans-serif;
+    font-size: 1.5rem;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+}
+
+.gallery ol.thumbs li:hover {
+    background-color: #6666ff;
+}
+
+.gallery div.figure {
+    grid-area: dog;
+}
+
+.gallery div.figure img {
+    width: 100%;
+    display: none;
+}
+
+.gallery div.figure.top img.top {
+    display: block;
+}
+
+.gallery div.figure.bottom img.bottom {
+    display: block;
+}
+
+.gallery div.figure.left img.left {
+    display: block;
+}
+
+.gallery div.figure.right img.right {
+    display: block;
+}
+
+.ratio-demo {
+    max-width: 50vw;
+    position: relative;
+}
+
+.ratio-demo:before {
+    display: block;
+    content: '';
+    width: 100%;
+    padding-top: 56.25%;
+}
+
+.ratio-demo>.content {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.ratio-demo .content {
+    background-color: red;
+}
+
+
+/*# sourceMappingURL=main.css.map */

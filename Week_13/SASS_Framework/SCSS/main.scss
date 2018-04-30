@@ -1,0 +1,100 @@
+$sans: Helvetica, sans-serif;
+$baseline: 2rem;
+
+@mixin btn($color) {
+	line-height: $baseline;
+	height: $baseline;
+	min-width: 3rem;
+	padding: 1rem;
+	background-color: $color;
+	border-radius: 1rem;
+	font-family: $sans;
+	font-size: 1.5rem;
+	color: white;
+	text-align: center;
+	cursor: pointer;
+	&:hover {
+		background-color: lighten($color, 20%);
+	}
+}
+
+@mixin aspect-ratio($width, $height) {
+	position: relative;
+	&:before {
+		display: block;
+		content: '';
+		width: 100%;
+		padding-top: ($height/$width) * 100%;
+	}
+
+	> .content {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+	}
+}
+
+
+
+
+
+
+.container {
+	width:960px;
+	margin: 0 auto;
+}
+
+.gallery {
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	grid-template-areas: 'cat dog';
+
+	ol.thumbs {
+		grid-area: cat;
+		list-style-type: none;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		padding:1rem;
+		li {
+			@include btn(blue);
+		}
+	}
+
+	div.figure {
+		grid-area: dog;
+		img {
+			width: 100%;
+			display: none
+		}
+		&.top img.top{
+			display: block
+		}
+		&.bottom img.bottom{
+			display: block
+		}
+		&.left img.left{
+			display: block
+		}
+		&.right img.right{
+			display: block
+		}
+	}
+}
+
+.ratio-demo {
+	max-width: 50vw;
+	@include aspect-ratio(16,9);
+	.content {
+		background-color: red;
+	}
+}
+
+
+
+
+
+
+
