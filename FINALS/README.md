@@ -21,7 +21,7 @@ This week you will be presenting your final website projects. Your presentation 
 
 ## Source Code on Github and Link to Hosted Site (live on server)
 
-Be sure to have a visible folder labeled midterm in your repository with your source code by THIS COMING FRIDAY. Within your midterm folder, add a README.md file containing a link to the live hosted site, and a second link to your documentation.
+Be sure to have a visible folder labeled midterm in your repository with your source code by WEDNESDAY MAY 9. Within your midterm folder, add a README.md file containing a link to the live hosted site, and a second link to your documentation.
 
 You can add links with markdown as follows:
 
