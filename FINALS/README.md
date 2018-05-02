@@ -25,7 +25,7 @@ Be sure to have a visible folder labeled midterm in your repository with your so
 
 You can add links with markdown as follows:
 
-[The Link Title A User Sees](http://theURLtoLINKto.com)
+`[The Link Title A User Sees](http://theURLtoLINKto.com)`
 
 # Presentation Order
 
